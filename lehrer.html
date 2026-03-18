@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Lehrer-Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="lehrer-page" style="background:var(--bg);">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Zellen-Escape<span class="logo-badge">NT9</span></a>
+  </div>
+</header>
+
+<div class="mappe-banner">
+  <div class="mappe-banner-inner">
+    <span class="mappe-label">Lehrerbereich</span>
+    <h1>Lehrer-Login</h1>
+  </div>
+</div>
+
+<main>
+  <div class="lehrer-page" style="max-width:700px;margin:2rem auto;padding:0 1.5rem;">
+
+    <div id="login-section" class="lehrer-card">
+      <h2>🔐 Anmelden</h2>
+      <p>Der Lehrer-Modus entsperrt alle Labore, damit ihr den Escape Room vorführen oder testen könnt.</p>
+      <p style="color:var(--text-faint);font-size:0.88rem;">Passwort: (im Unterricht vom Lehrenden mitgeteilt)</p>
+      <input type="password" id="pw-input" class="lehrer-input" placeholder="Passwort eingeben" onkeydown="if(event.key==='Enter')checkLogin()">
+      <br>
+      <button class="btn-check" onclick="checkLogin()">Anmelden</button>
+      <div id="login-feedback" class="feedback-area" style="max-width:300px;margin-top:0.75rem;"></div>
+    </div>
+
+    <div id="teacher-section" class="lehrer-card" style="display:none;">
+      <h2>👩‍🏫 Lehrer-Modus aktiv</h2>
+      <p>Du bist als Lehrkraft angemeldet. Alle Labore sind jetzt zugänglich.</p>
+      <p style="color:var(--text-faint);font-size:0.88rem;">
+        Der Lehrer-Modus wird beim Verlassen der Seite automatisch beendet (sessionStorage).
+      </p>
+
+      <h3 style="color:var(--text-light);margin:1.5rem 0 0.75rem;font-size:1rem;">Code-Wörter (Übersicht)</h3>
+      <table class="tf-table" style="font-size:0.88rem;">
+        <thead>
+          <tr><th>Labor</th><th>Titel</th><th>Code-Wort</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Was ist Leben?</td><td><code>BAUSTEIN</code></td></tr>
+          <tr><td>2</td><td>Blick durchs Mikroskop</td><td><code>VAKUOLE</code></td></tr>
+          <tr><td>3</td><td>Deine Zellen, meine Zellen</td><td><code>MEMBRAN</code></td></tr>
+          <tr><td>4</td><td>Der Motor der Zelle</td><td><code>MITOCHONDRIUM</code></td></tr>
+          <tr><td>5</td><td>Bauplan des Lebens</td><td><code>CHROMOSOM</code></td></tr>
+          <tr><td>6</td><td>XX oder XY?</td><td><code>GONOSOM</code></td></tr>
+          <tr><td>7</td><td>Fehler, Zufall, Zukunft</td><td><em>(kein Code)</em></td></tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap;">
+        <a href="karte.html" class="btn-check" style="text-decoration:none;display:inline-flex;align-items:center;">
+          Zur Labor-Übersicht →
+        </a>
+        <button class="btn-check" onclick="resetAndRedirect()" style="background:var(--red-light);">
+          Fortschritt zurücksetzen
+        </button>
+        <button onclick="exitTeacherMode()" style="background:transparent;border:1px solid var(--text-faint);color:var(--text-faint);padding:0.5rem 1rem;border-radius:var(--radius);cursor:pointer;font-family:inherit;">
+          Abmelden
+        </button>
+      </div>
+    </div>
+
+    <div class="lehrer-card">
+      <h2>ℹ️ Hinweise zur Nutzung</h2>
+      <p>Dieser Escape Room ist eine statische Website – es werden keine Daten an Server übertragen. Der Lernfortschritt wird ausschließlich im localStorage des Browsers gespeichert.</p>
+      <p>Für den Unterricht empfiehlt sich der Einsatz auf Schülergeräten (Tablets, Laptops) in Einzel- oder Partnerarbeit. Der Lehrmodus ermöglicht Demo-Vorführungen auf dem Lehrerrechner.</p>
+      <p><a href="datenschutz.html" style="color:var(--gold);">Datenschutzerklärung →</a></p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  Erstellt mit Liebe &#10084;&#65039; und <a href="https://claude.ai/claude-code" target="_blank" rel="noopener">Claude Code</a> von Jonas Engeler
+  <span class="footer-sep">|</span>
+  <a href="impressum.html">Impressum</a>
+  <span class="footer-sep">|</span>
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+<script src="scripts/app.js"></script>
+<script>
+  var TEACHER_PW = '1234';
+
+  function checkLogin() {
+    var pw = document.getElementById('pw-input').value;
+    var fb = document.getElementById('login-feedback');
+    if (pw === TEACHER_PW) {
+      sessionStorage.setItem('zellen-escape-room_teacher_v1', 'active');
+      document.getElementById('login-section').style.display = 'none';
+      document.getElementById('teacher-section').style.display = 'block';
+    } else {
+      fb.className = 'feedback-area wrong';
+      fb.textContent = 'Falsches Passwort.';
+      fb.style.display = 'block';
+    }
+  }
+
+  function exitTeacherMode() {
+    sessionStorage.removeItem('zellen-escape-room_teacher_v1');
+    window.location.href = 'index.html';
+  }
+
+  function resetAndRedirect() {
+    if (confirm('Wirklich alle Fortschritte l\u00f6schen?')) {
+      resetProgress();
+      alert('Fortschritt wurde zur\u00fcckgesetzt.');
+    }
+  }
+
+  // Wenn bereits eingeloggt
+  if (sessionStorage.getItem('zellen-escape-room_teacher_v1') === 'active') {
+    document.getElementById('login-section').style.display = 'none';
+    document.getElementById('teacher-section').style.display = 'block';
+  }
+</script>
+</body>
+</html>

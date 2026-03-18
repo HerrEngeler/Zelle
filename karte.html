@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Labor-Übersicht</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="karte-page">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">Zellen-Escape<span class="logo-badge">NT9</span></a>
+    <nav style="margin-left:auto;display:flex;gap:1rem;align-items:center;">
+      <a href="lehrer.html" style="font-size:0.85rem;color:var(--text-faint);">Lehrer-Login</a>
+    </nav>
+  </div>
+</header>
+
+<div class="mappe-banner">
+  <div class="mappe-banner-inner">
+    <span class="mappe-label">Labor-Übersicht</span>
+    <h1>Alle 7 Forschungsdatenbanken</h1>
+  </div>
+</div>
+
+<main class="content-area" style="max-width:900px;margin:2rem auto;padding:0 1.5rem;">
+  <p style="color:var(--text-faint);margin-bottom:1.5rem;font-size:0.95rem;">
+    Hier siehst du alle Labore auf einen Blick. Gesperrte Labore (🔒) werden freigeschaltet, wenn du das vorherige abgeschlossen hast.
+  </p>
+  <div class="karte-grid" id="karte-grid">
+    <!-- Wird von renderKarte() befüllt -->
+  </div>
+
+  <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);">
+    <p style="color:var(--text-faint);font-size:0.85rem;margin-bottom:0.75rem;">Fortschritt zurücksetzen (alle Labore wieder sperren):</p>
+    <button onclick="confirmReset()" style="background:transparent;border:1px solid var(--red-light);color:var(--red-light);padding:0.4rem 1rem;border-radius:var(--radius);cursor:pointer;font-size:0.85rem;font-family:var(--lato);">
+      Fortschritt zurücksetzen
+    </button>
+  </div>
+</main>
+
+<footer class="site-footer">
+  Erstellt mit Liebe &#10084;&#65039; und <a href="https://claude.ai/claude-code" target="_blank" rel="noopener">Claude Code</a> von Jonas Engeler
+  <span class="footer-sep">|</span>
+  <a href="impressum.html">Impressum</a>
+  <span class="footer-sep">|</span>
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+<!-- app.js VOR inline script laden (kein eigenes MUSIC_KEY/TRACK_KEY!) -->
+<script src="scripts/app.js"></script>
+<script>
+  var PROGRESS_KEY_LOCAL = 'zellen-escape-room_progress_v1';
+  var TEACHER_KEY_LOCAL  = 'zellen-escape-room_teacher_v1';
+
+  function openKapitel(n) {
+    if (!isUnlocked(n)) return;
+    sessionStorage.setItem('zellen-escape-room_music_v1', 'on');
+    var urls = {
+      1: 'labore/labor-01.html',
+      2: 'labore/labor-02.html',
+      3: 'labore/labor-03.html',
+      4: 'labore/labor-04.html',
+      5: 'labore/labor-05.html',
+      6: 'labore/labor-06.html',
+      7: 'labore/labor-07.html'
+    };
+    if (urls[n]) window.location.href = urls[n];
+  }
+
+  function confirmReset() {
+    if (confirm('Wirklich alle Fortschritte l\u00f6schen? Alle Labore werden wieder gesperrt.')) {
+      resetProgress();
+      renderKarte();
+    }
+  }
+
+  renderKarte();
+  initMusicPlayer(); // NACH renderKarte() aufrufen
+  addTeacherUI();
+</script>
+</body>
+</html>

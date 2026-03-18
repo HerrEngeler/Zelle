@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Startseite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="landing-page">
+
+<header class="site-header">
+  <div class="header-inner">
+    <span class="site-logo">Zellen-Escape<span class="logo-badge">NT9</span></span>
+    <nav style="margin-left:auto;display:flex;gap:1rem;align-items:center;">
+      <a href="karte.html" style="font-size:0.85rem;color:var(--text-faint);">Labor-Übersicht</a>
+      <a href="lehrer.html" style="font-size:0.85rem;color:var(--text-faint);">Lehrer-Login</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="landing-hero">
+    <span class="landing-label">Naturwissenschaften · Klasse 9 · Zellen &amp; Genetik</span>
+    <h1 class="landing-title">Rettet Dr. Zara Kerns Forschung!</h1>
+    <p class="landing-subtitle">Ein interaktiver Escape Room über Zellen &amp; Genetik</p>
+    <p class="landing-intro">
+      Im Bio-Labor der Universität Neustadt hat eine KI alle sieben Forschungsdatenbanken der Genetik-Abteilung verschlüsselt. Wissenschaftlerin Dr. Zara Kern – kurz vor dem Durchbruch bei einer seltenen Erbkrankheit – ist ausgesperrt. Beweist euer Wissen über Zellen, Genetik und das Leben selbst – und entsperrt Labor für Labor die verschlüsselten Datenbanken!
+    </p>
+
+    <div class="vorwissens-block">
+      <p class="vorwissens-intro">🧠 Bevor du startest – aktiviere dein Vorwissen:</p>
+      <ol class="vorwissens-questions">
+        <li>Was weißt du bereits über Zellen? Was macht eine Zelle aus?</li>
+        <li>Was fällt dir spontan ein, wenn du „DNA" oder „Gene" hörst?</li>
+        <li>Was möchtest du am Ende dieses Escape Rooms verstanden haben?</li>
+      </ol>
+    </div>
+
+    <div class="cta-buttons">
+      <a href="labore/labor-01.html" class="start-btn">🚀 Escape Room starten</a>
+      <button class="anleitung-btn" onclick="document.getElementById('anleitung-overlay').classList.add('open')">📋 Anleitung</button>
+    </div>
+
+    <div style="margin-top:1rem;">
+      <a href="karte.html" style="color:var(--text-faint);font-size:0.88rem;">→ Zur Labor-Übersicht (alle 7 Labore)</a>
+    </div>
+  </section>
+</main>
+
+<!-- Anleitung-Modal -->
+<div class="anleitung-overlay" id="anleitung-overlay">
+  <div class="anleitung-modal">
+    <h2>📋 So funktioniert der Escape Room</h2>
+    <p><strong>Deine Mission:</strong> Hilf Dr. Zara Kern, ihre verschlüsselten Forschungsdaten zurückzuholen!</p>
+    <ol>
+      <li>Lies die Forschungstexte in jedem Labor sorgfältig.</li>
+      <li>Beantworte alle 5 Aufgaben, um die Code-Eingabe freizuschalten.</li>
+      <li>Das Code-Wort steht <strong>fett gedruckt</strong> im Text – finde es!</li>
+      <li>Gib das Code-Wort ein, um das nächste Labor zu öffnen.</li>
+      <li>Löse alle 7 Labore und befreit Dr. Kerns Forschungsdatenbanken!</li>
+    </ol>
+    <p><strong>Tipps:</strong></p>
+    <ul>
+      <li>Bei schwierigen Aufgaben (★★★) gibt es zwei Tipp-Stufen.</li>
+      <li>Der Methodenkoffer am Anfang jedes Labors hilft dir beim Lesen.</li>
+      <li>Ihr könnt auch in der Gruppe zusammenarbeiten!</li>
+    </ul>
+    <button class="modal-close-btn" id="anleitung-close" onclick="document.getElementById('anleitung-overlay').classList.remove('open')">Verstanden – los geht&rsquo;s!</button>
+  </div>
+</div>
+
+<footer class="site-footer">
+  Erstellt mit Liebe &#10084;&#65039; und <a href="https://claude.ai/claude-code" target="_blank" rel="noopener">Claude Code</a> von Jonas Engeler
+  <span class="footer-sep">|</span>
+  <a href="impressum.html">Impressum</a>
+  <span class="footer-sep">|</span>
+  <a href="datenschutz.html">Datenschutz</a>
+</footer>
+
+<script src="scripts/app.js"></script>
+<script>
+  initLandingPage();
+</script>
+</body>
+</html>
