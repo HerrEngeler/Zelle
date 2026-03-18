@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Labor 7: Fehler, Zufall, Zukunft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+  <style>
+    /* ─── Abschluss-Zertifikat ─── */
+    .completion-cert {
+      background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3d 100%);
+      border: 3px solid #5cb87a;
+      border-radius: 12px;
+      padding: 2rem 2.5rem;
+      margin: 2rem 0;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(92, 184, 122, 0.25);
+    }
+    .cert-header {
+      margin-bottom: 1rem;
+    }
+    .cert-badge {
+      display: inline-block;
+      background: #5cb87a;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      padding: 0.35rem 1rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+    }
+    .cert-header h3 {
+      color: #e8f5ed;
+      font-size: 1.5rem;
+      margin: 0.5rem 0 0;
+    }
+    .cert-text {
+      color: #c8e6d0;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin: 1rem 0 1.5rem;
+    }
+    .cert-nav {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cert-nav .btn-next {
+      background: #5cb87a;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .cert-nav .btn-next:hover {
+      background: #4aa366;
+    }
+    .cert-nav .home-btn {
+      background: transparent;
+      color: #a8d5b5;
+      border: 2px solid #5cb87a;
+      border-radius: 6px;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .cert-nav .home-btn:hover {
+      background: rgba(92, 184, 122, 0.15);
+      color: #e8f5ed;
+    }
+    /* ─── Ethik-Szenarien ─── */
+    .ethik-szenarien {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .ethik-szenario-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 1rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .ethik-szenario-label:hover {
+      border-color: #5cb87a;
+      background: #f0faf3;
+    }
+    .ethik-szenario-label input[type="checkbox"] {
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+      width: 1.1rem;
+      height: 1.1rem;
+      accent-color: #2d7a4a;
+    }
+    .ethik-szenario-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #2c3e50;
+    }
+    .ethik-szenario-id {
+      font-weight: 700;
+      color: #2d7a4a;
+      margin-right: 0.25rem;
+    }
+    /* ─── Perspektiven-Feedback ─── */
+    .perspektiven-block {
+      margin-top: 0.75rem;
+    }
+    .perspektive-card {
+      background: #fff;
+      border-left: 4px solid #5cb87a;
+      border-radius: 0 8px 8px 0;
+      padding: 0.9rem 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .perspektive-card h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1a3a2a;
+      margin: 0 0 0.5rem;
+    }
+    .perspektive-dafuer {
+      border-left-color: #5cb87a;
+    }
+    .perspektive-dagegen {
+      border-left-color: #e07b54;
+    }
+    .perspektive-dagegen h4 {
+      color: #7a2e1a;
+    }
+    .rechtslage-box {
+      background: #eef4fb;
+      border: 1px solid #b3cde8;
+      border-radius: 8px;
+      padding: 1rem 1.2rem;
+      margin-top: 0.5rem;
+    }
+    .rechtslage-box h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #1a3560;
+      margin: 0 0 0.4rem;
+    }
+    .rechtslage-box p {
+      font-size: 0.9rem;
+      color: #2c3e50;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .score-result-block {
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(201,162,39,0.08);
+      border: 1px solid rgba(201,162,39,0.3);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .score-result-stars {
+      font-size: 1.8rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.3rem;
+    }
+    .score-result-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .score-result-pts {
+      font-family: 'Courier Prime', monospace;
+      font-size: 1.05rem;
+      color: #e8e0d4;
+      margin-bottom: 0.75rem;
+    }
+    .score-result-breakdown {
+      font-size: 0.72rem;
+      color: #9e9080;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body class="mappe-page">
+
+  <!-- HEADER mit Chapter-Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="site-logo">NT9<span class="logo-badge">Escape</span></a>
+      <nav class="chapter-nav" aria-label="Kapitel-Navigation">
+        <a href="#" class="nav-arrow" id="prev-mappe">&#8249;</a>
+        <div class="chapter-circles">
+          <a href="labor-01.html" class="chapter-circle" data-mappe="1" data-title="Labor 1">1</a>
+          <a href="labor-02.html" class="chapter-circle" data-mappe="2" data-title="Labor 2">2</a>
+          <a href="labor-03.html" class="chapter-circle" data-mappe="3" data-title="Labor 3">3</a>
+          <a href="labor-04.html" class="chapter-circle" data-mappe="4" data-title="Labor 4">4</a>
+          <a href="labor-05.html" class="chapter-circle" data-mappe="5" data-title="Labor 5">5</a>
+          <a href="labor-06.html" class="chapter-circle" data-mappe="6" data-title="Labor 6">6</a>
+          <a href="labor-07.html" class="chapter-circle active" data-mappe="7" data-title="Labor 7">7</a>
+        </div>
+        <a href="#" class="nav-arrow" id="next-mappe">&#8250;</a>
+      </nav>
+      <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Aufgaben ein-/ausblenden">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- MAPPE-BANNER -->
+  <div class="mappe-banner">
+    <div class="mappe-banner-inner">
+      <span class="mappe-label">Labor 7</span>
+      <h1>Fehler, Zufall, Zukunft</h1>
+    </div>
+  </div>
+
+  <!-- HAUPTLAYOUT -->
+  <div class="layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="task-sidebar" id="task-sidebar">
+      <h2 class="sidebar-title">Aufgaben</h2>
+      <ul class="task-list">
+        <li class="task-nav-item active" data-task="1">
+          <span class="task-status"></span>
+          <span class="task-nav-title">Was ist eine Mutation?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="2">
+          <span class="task-status">&#128274;</span>
+          <span class="task-nav-title">Richtig oder Falsch?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="3">
+          <span class="task-status">&#128274;</span>
+          <span class="task-nav-title">Endogen oder Exogen?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="4">
+          <span class="task-status">&#128274;</span>
+          <span class="task-nav-title">Insulin: Schritte sortieren</span>
+        </li>
+        <li class="task-nav-item locked" data-task="5">
+          <span class="task-status">&#128274;</span>
+          <span class="task-nav-title">Ethik: Gentechnik am Menschen</span>
+        </li>
+        <li class="task-nav-item locked" data-task="fertig">
+          <span class="task-status">&#128274;</span>
+          <span class="task-nav-title">&#127942; Forschung abgeschlossen!</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- HAUPTINHALT -->
+    <main class="content-area">
+
+      <!-- ARCHIV-KONTEXT (narrativer Abschluss) -->
+      <div class="archive-context">
+        <div class="archive-stamp">Zellen-Escape-Room NT9 &middot; Labor 7 &middot; Finale</div>
+        <p class="context-text">Datenbank 7 &ndash; Letzte Verschl&uuml;sselung: Die KI hat einen letzten Riegel vorgelegt. Aber ihr habt es bis hierher geschafft. Beweist, dass ihr Mutation, Erbkrankheiten und Gentechnik verstanden habt &ndash; dann ist Dr. Zara Kern frei, ihre lebensrettende Therapie zu entwickeln. Alles h&auml;ngt an diesem letzten Labor.</p>
+      </div>
+
+      <!-- STRATEGIE-KOFFER -->
+      <details class="strategie-koffer">
+        <summary>&#129520; Strategie-Koffer &ndash; Tipps f&uuml;r dieses Labor</summary>
+        <div class="strategie-koffer-body">
+          <div class="strategie-item"><strong>Mutation = dauerhafte Ver&auml;nderung der DNA-Sequenz.</strong> Ursachen: Kopierfehler (endogen), Strahlung oder Chemikalien (exogen).</div>
+          <div class="strategie-item"><strong>Chromosomenmutation</strong> (z.&nbsp;B. Trisomie 21): Ein ganzes Chromosom ist zu viel oder zu wenig vorhanden. <strong>Genmutation</strong> (z.&nbsp;B. H&auml;mophilie): Ein einzelnes Gen ist ver&auml;ndert.</div>
+          <div class="strategie-item"><strong>Gentechnische Insulinherstellung:</strong> Gen ausschneiden &rarr; in Plasmid einbauen &rarr; Bakterium einschleusen &rarr; Bakterien produzieren Insulin &rarr; Reinigung und Einsatz als Medikament.</div>
+        </div>
+      </details>
+
+      <!-- INFORMATIONSTEXT -->
+      <section class="info-text-section">
+        <h2 class="section-title">Informationstext</h2>
+        <div class="info-text-card">
+
+          <h3>Was ist eine Mutation?</h3>
+          <p>Unser Erbgut &ndash; die DNA in jeder K&ouml;rperzelle &ndash; wird bei jeder Zellteilung kopiert. Dabei k&ouml;nnen Fehler entstehen: Ein falscher Baustein wird eingebaut, ein St&uuml;ck DNA geht verloren oder landet an der falschen Stelle. Solche dauerhaften Ver&auml;nderungen der DNA nennt man <strong>Mutationen</strong>.</p>
+          <p>Mutationen entstehen auf drei Hauptwegen:</p>
+          <ul>
+            <li><strong>Kopierfehler:</strong> Bei der Verdopplung der DNA macht die zust&auml;ndige Zellmaschinerie gelegentlich Fehler &ndash; &auml;hnlich wie ein Schreibfehler beim schnellen Tippen. Die meisten dieser Fehler werden sofort repariert, doch manche bleiben.</li>
+            <li><strong>Strahlung:</strong> UV-Licht der Sonne, R&ouml;ntgenstrahlen oder radioaktive Strahlung k&ouml;nnen DNA-Str&auml;nge direkt sch&auml;digen oder brechen.</li>
+            <li><strong>Chemikalien:</strong> Bestimmte Stoffe &ndash; etwa Teerstoffe im Tabakrauch oder industrielle Chemikalien &ndash; k&ouml;nnen Bausteine der DNA ver&auml;ndern.</li>
+          </ul>
+          <p>Mutationen k&ouml;nnen <strong>neutral</strong> sein (keine Auswirkung), <strong>sch&auml;dlich</strong> (Erkrankung oder Fehlfunktion) oder &ndash; selten &ndash; <strong>vorteilhaft</strong> (neue n&uuml;tzliche Eigenschaft). Die meisten Mutationen betreffen K&ouml;rperzellen und werden nicht vererbt. Nur Mutationen in Keimzellen (Ei- oder Samenzellen) k&ouml;nnen an die n&auml;chste Generation weitergegeben werden.</p>
+
+          <hr class="info-divider">
+
+          <h3>Down-Syndrom und H&auml;mophilie: Zwei Beispiele</h3>
+          <p><strong>Down-Syndrom (Trisomie 21)</strong> entsteht nicht durch die Ver&auml;nderung eines einzelnen Gens, sondern durch einen Fehler bei der Zellteilung: Ein Chromosom zu viel. Bei Menschen mit Down-Syndrom ist das Chromosom 21 dreimal vorhanden statt zweimal. Dieser Fehler passiert zuf&auml;llig w&auml;hrend der Reifung von Ei- oder Samenzellen. Etwa eines von 600 Neugeborenen kommt mit Trisomie 21 zur Welt. Menschen mit Down-Syndrom haben unterschiedliche St&auml;rken und Unterst&uuml;tzungsbedarfe; viele f&uuml;hren ein selbstst&auml;ndiges, erf&uuml;lltes Leben.</p>
+          <p><strong>H&auml;mophilie (Bluterkrankheit)</strong> ist eine Genmutation auf dem X-Chromosom. Das betroffene Gen enth&auml;lt den Bauplan f&uuml;r einen wichtigen Blutgerinnungsfaktor. Fehlt dieser Faktor, gerinnt Blut nach Verletzungen nur sehr langsam oder gar nicht. Da M&auml;nner nur ein X-Chromosom besitzen (XY), reicht ein einziges fehlerhaftes Gen aus, um zu erkranken. Frauen (XX) haben meist ein zweites funktionierendes Gen als Reserve &ndash; sie sind h&auml;ufig &Uuml;bertr&auml;gerinnen ohne eigene Symptome. In Deutschland leben etwa 10.000 Menschen mit H&auml;mophilie.</p>
+
+          <hr class="info-divider">
+
+          <h3>Insulin aus Bakterien &ndash; ein Meilenstein der Gentechnik</h3>
+          <p>Fr&uuml;her wurden Diabetiker mit Insulin aus den Bauchspeicheldr&uuml;sen von Schweinen und Rindern behandelt. 1982 gelang ein Durchbruch: Wissenschaftler &uuml;bertrugen das menschliche Insulin-Gen in das Darmbakterium <em>Escherichia coli</em> (E.&nbsp;coli). Die Bakterien lasen das eingebaute Gen wie eine Bauanleitung und begannen, menschliches Insulin herzustellen. Seitdem wird der Gro&szlig;teil des weltweit ben&ouml;tigten Insulins so produziert.</p>
+          <p><strong>Wie funktioniert das?</strong> Das Insulin-Gen wird mithilfe molekularer &#8222;Scheren&#8220; (Restriktionsenzyme) herausgeschnitten und in einen ringf&ouml;rmigen DNA-Abschnitt der Bakterien (Plasmid) eingef&uuml;gt. Die ver&auml;nderten Bakterien teilen sich millionenfach &ndash; und produzieren dabei Insulin, das gereinigt und als Medikament eingesetzt wird.</p>
+          <p><strong>CRISPR-Cas9</strong> ist eine neuere Methode, bei der Gene gezielt ver&auml;ndert oder &#8222;repariert&#8220; werden k&ouml;nnen. Sie wird bereits in der Forschung zu Erbkrankheiten erprobt &ndash; und wirft &auml;hnliche ethische Fragen auf: Was darf ver&auml;ndert werden, was nicht?</p>
+
+          <hr class="info-divider">
+
+          <h3>Stimmen, die z&auml;hlen</h3>
+          <p>Natalie Dedreux ist Journalistin, Aktivistin &ndash; und hat das Down-Syndrom. In Interviews, Talkshows und auf Social Media spricht sie &uuml;ber ihr Leben, k&auml;mpft f&uuml;r Inklusion und hat sogar mit der damaligen Bundeskanzlerin Angela Merkel &uuml;ber die gesellschaftliche Teilhabe von Menschen mit Behinderung gesprochen.</p>
+          <p>Beide Beispiele zeigen: Eine genetische Besonderheit bestimmt nicht, was ein Mensch leisten, erleben und bedeuten kann. Lebensqualit&auml;t h&auml;ngt zu einem erheblichen Teil davon ab, wie offen und zug&auml;nglich eine Gesellschaft gestaltet ist.</p>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 1 – Multiple Choice ===== -->
+      <section id="task-1" class="task-block visible" aria-label="Aufgabe 1">
+        <div class="task-block-header">
+          <div class="task-meta">
+            <span class="task-number">Aufgabe 1 von 5</span>
+            <span class="difficulty" title="Einfach">&#9733;&#9734;&#9734;</span>
+          </div>
+        </div>
+        <h3 class="task-question">Was ist eine Mutation?</h3>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="radio" name="q1" value="a">
+            <span class="option-text">a) Eine vor&uuml;bergehende Ver&auml;nderung der Zellform</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="b">
+            <span class="option-text">b) Der Abbau eines Proteins in der Zelle</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="c">
+            <span class="option-text">c) Die Verdopplung der gesamten DNA vor der Zellteilung</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="d">
+            <span class="option-text">d) Eine dauerhafte Ver&auml;nderung der DNA-Sequenz</span>
+          </label>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask1()">Antwort pr&uuml;fen</button>
+        </div>
+
+        <div id="feedback-1" class="feedback-box hidden"></div>
+
+        <div id="next-btn-1" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(2)">Weiter zu Aufgabe 2 &rarr;</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 2 – Richtig/Falsch ===== -->
+      <section id="task-2" class="task-block" aria-label="Aufgabe 2">
+        <div class="task-block-header">
+          <div class="task-meta">
+            <span class="task-number">Aufgabe 2 von 5</span>
+            <span class="difficulty" title="Einfach">&#9733;&#9734;&#9734;</span>
+          </div>
+        </div>
+        <h3 class="task-question">Beurteile die folgenden Aussagen: Richtig oder Falsch?</h3>
+
+        <div class="task-table-wrap">
+          <table class="rf-table">
+            <thead>
+              <tr>
+                <th class="rf-col-statement">Aussage</th>
+                <th class="rf-col-choice">Richtig</th>
+                <th class="rf-col-choice">Falsch</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Das Down-Syndrom (Trisomie 21) entsteht durch eine Chromosomenmutation &ndash; ein Chromosom ist dreimal statt zweimal vorhanden.</td>
+                <td class="rf-radio"><input type="radio" name="tf2-0" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-0" value="false"></td>
+              </tr>
+              <tr>
+                <td>H&auml;mophilie (Bluterkrankheit) ist eine Genmutation auf dem X-Chromosom, die dazu f&uuml;hrt, dass ein Blutgerinnungsfaktor fehlt.</td>
+                <td class="rf-radio"><input type="radio" name="tf2-1" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-1" value="false"></td>
+              </tr>
+              <tr>
+                <td>Frauen k&ouml;nnen H&auml;mophilie nicht bekommen, da sie immer zwei gesunde X-Chromosomen besitzen.</td>
+                <td class="rf-radio"><input type="radio" name="tf2-2" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-2" value="false"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask2()">Antwort pr&uuml;fen</button>
+        </div>
+
+        <div id="feedback-2" class="feedback-box hidden"></div>
+
+        <div id="next-btn-2" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(3)">Weiter zu Aufgabe 3 &rarr;</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 3 – Zuordnung endogen/exogen ===== -->
+      <section id="task-3" class="task-block" aria-label="Aufgabe 3">
+        <div class="task-block-header">
+          <div class="task-meta">
+            <span class="task-number">Aufgabe 3 von 5</span>
+            <span class="difficulty" title="Mittel">&#9733;&#9733;&#9734;</span>
+          </div>
+        </div>
+        <h3 class="task-question">Mutationen k&ouml;nnen durch verschiedene Ursachen entstehen. Ordne jede Ursache der passenden Kategorie zu: <strong>Endogen</strong> (von innen, aus der Zelle selbst) oder <strong>Exogen</strong> (von au&szlig;en, durch Umwelteinfl&uuml;sse).</h3>
+
+        <div class="zuordnung-list">
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Kopierfehler beim Verdoppeln der DNA w&auml;hrend der Zellteilung</span>
+            <div class="zuordnung-radios">
+              <label><input type="radio" name="z3-0" value="Endogen"> Endogen</label>
+              <label><input type="radio" name="z3-0" value="Exogen"> Exogen</label>
+            </div>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">UV-Strahlung der Sonne</span>
+            <div class="zuordnung-radios">
+              <label><input type="radio" name="z3-1" value="Endogen"> Endogen</label>
+              <label><input type="radio" name="z3-1" value="Exogen"> Exogen</label>
+            </div>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Teerstoffe im Tabakrauch</span>
+            <div class="zuordnung-radios">
+              <label><input type="radio" name="z3-2" value="Endogen"> Endogen</label>
+              <label><input type="radio" name="z3-2" value="Exogen"> Exogen</label>
+            </div>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Radioaktive Strahlung</span>
+            <div class="zuordnung-radios">
+              <label><input type="radio" name="z3-3" value="Endogen"> Endogen</label>
+              <label><input type="radio" name="z3-3" value="Exogen"> Exogen</label>
+            </div>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Fehler bei der Chromosomenverteilung w&auml;hrend der Reifeteilung</span>
+            <div class="zuordnung-radios">
+              <label><input type="radio" name="z3-4" value="Endogen"> Endogen</label>
+              <label><input type="radio" name="z3-4" value="Exogen"> Exogen</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask3()">Antwort pr&uuml;fen</button>
+        </div>
+
+        <div id="feedback-3" class="feedback-box hidden"></div>
+
+        <div id="next-btn-3" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(4)">Weiter zu Aufgabe 4 &rarr;</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 4 – Sortierung Insulin-Schritte ===== -->
+      <section id="task-4" class="task-block" aria-label="Aufgabe 4">
+        <div class="task-block-header">
+          <div class="task-meta">
+            <span class="task-number">Aufgabe 4 von 5</span>
+            <span class="difficulty" title="Mittel">&#9733;&#9733;&#9734;</span>
+          </div>
+        </div>
+        <h3 class="task-question">Insulin wird heute gentechnisch in Bakterien hergestellt. Bringe die folgenden Schritte in die richtige Reihenfolge, in der die gentechnische Insulinherstellung abl&auml;uft. W&auml;hle f&uuml;r jeden Schritt eine Position (1&ndash;5).</h3>
+
+        <div class="sortierung-list">
+          <div class="sortierung-row">
+            <span class="sortierung-text">Das menschliche Insulin-Gen wird mithilfe von Restriktionsenzymen (molekulare &#8222;Scheren&#8220;) aus der menschlichen DNA herausgeschnitten.</span>
+            <select class="sortierung-select" id="s4-0">
+              <option value="">&#8211; Position &#8211;</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="sortierung-row">
+            <span class="sortierung-text">Das Insulin-Gen wird in ein Plasmid (ringf&ouml;rmiges DNA-St&uuml;ck) des Bakteriums E.&nbsp;coli eingef&uuml;gt.</span>
+            <select class="sortierung-select" id="s4-1">
+              <option value="">&#8211; Position &#8211;</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="sortierung-row">
+            <span class="sortierung-text">Das ver&auml;nderte Plasmid wird in das Bakterium eingeschleust &ndash; das Bakterium besitzt nun den Bauplan f&uuml;r menschliches Insulin.</span>
+            <select class="sortierung-select" id="s4-2">
+              <option value="">&#8211; Position &#8211;</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="sortierung-row">
+            <span class="sortierung-text">Die ver&auml;nderten Bakterien teilen sich millionenfach und produzieren dabei menschliches Insulin.</span>
+            <select class="sortierung-select" id="s4-3">
+              <option value="">&#8211; Position &#8211;</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="sortierung-row">
+            <span class="sortierung-text">Das produzierte Insulin wird aus den Bakterien gewonnen, gereinigt und als Medikament eingesetzt.</span>
+            <select class="sortierung-select" id="s4-4">
+              <option value="">&#8211; Position &#8211;</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask4()">Antwort pr&uuml;fen</button>
+        </div>
+
+        <div id="feedback-4" class="feedback-box hidden"></div>
+
+        <div id="next-btn-4" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(5)">Weiter zu Aufgabe 5 &rarr;</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 5 – Ethik Mehrfachauswahl ===== -->
+      <section id="task-5" class="task-block" aria-label="Aufgabe 5">
+        <div class="task-block-header">
+          <div class="task-meta">
+            <span class="task-number">Aufgabe 5 von 5</span>
+            <span class="difficulty" title="Schwer">&#9733;&#9733;&#9733;</span>
+          </div>
+        </div>
+        <h3 class="task-question">Gentechnische Eingriffe in die menschliche DNA sind heute technisch m&ouml;glich. Lies die folgenden Szenarien und w&auml;hle aus, welche Eingriffe du pers&ouml;nlich f&uuml;r ethisch vertretbar h&auml;ltst.</h3>
+        <p class="task-hint">Es gibt keine eindeutig &#8222;richtige&#8220; Antwort &ndash; es geht darum, verschiedene Positionen zu durchdenken. Du kannst mehrere Szenarien ausw&auml;hlen oder auch alle ablehnen.</p>
+
+        <div class="ethik-szenarien">
+          <label class="ethik-szenario-label">
+            <input type="checkbox" name="ethik" value="A">
+            <span class="ethik-szenario-text"><span class="ethik-szenario-id">A)</span> Ein Kind wird voraussichtlich an einer schweren Erbkrankheit leiden, die zu fr&uuml;hem Tod f&uuml;hrt. Die Eltern lassen durch Gentechnik das fehlerhafte Gen korrigieren, bevor es geboren wird.</span>
+          </label>
+          <label class="ethik-szenario-label">
+            <input type="checkbox" name="ethik" value="B">
+            <span class="ethik-szenario-text"><span class="ethik-szenario-id">B)</span> Eltern m&ouml;chten durch Gentechnik sicherstellen, dass ihr Kind besonders gro&szlig;, sportlich oder intelligent wird.</span>
+          </label>
+          <label class="ethik-szenario-label">
+            <input type="checkbox" name="ethik" value="C">
+            <span class="ethik-szenario-text"><span class="ethik-szenario-id">C)</span> Ein erwachsener Mensch l&auml;sst eine eigene K&ouml;rperzelle gentechnisch ver&auml;ndern, um eine eigene Erkrankung (z.&nbsp;B. Krebs) zu behandeln. Die Ver&auml;nderung wird nicht vererbt.</span>
+          </label>
+          <label class="ethik-szenario-label">
+            <input type="checkbox" name="ethik" value="D">
+            <span class="ethik-szenario-text"><span class="ethik-szenario-id">D)</span> Durch Gentechnik werden Embryonen auf das Down-Syndrom (Trisomie 21) untersucht und nur solche ohne Trisomie eingepflanzt (Pr&auml;implantationsdiagnostik, PID).</span>
+          </label>
+        </div>
+
+        <div class="task-tipps">
+          <details class="tipp-details">
+            <summary class="tipp-summary">&#128161; Tipp 1</summary>
+            <p class="tipp-text">Gibt es einen Unterschied zwischen einem Eingriff, der eine Krankheit heilt, und einem, der ein Merkmal &#8222;verbessert&#8220;? Und macht es einen Unterschied, ob der Eingriff in K&ouml;rperzellen (nicht vererbbar) oder in Keimzellen (vererbbar) stattfindet?</p>
+          </details>
+          <details class="tipp-details">
+            <summary class="tipp-summary">&#128161; Tipp 2</summary>
+            <p class="tipp-text">Zwei Leitfragen der Bioethik: (1) Wessen Autonomie wird durch den Eingriff gesch&uuml;tzt oder eingeschr&auml;nkt &ndash; die der Eltern, des Kindes, der Gesellschaft? (2) Welche gesellschaftliche Botschaft sendet es, wenn bestimmte genetische Merkmale als &#8222;vermeidbar&#8220; gelten? Bedenke auch die Perspektive von Menschen, die mit diesen Merkmalen leben.</p>
+          </details>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask5()">Meine Auswahl absenden</button>
+        </div>
+
+        <div id="feedback-5" class="feedback-box hidden"></div>
+
+        <div id="next-btn-5" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask('fertig')">Zum Abschluss &rarr;</button>
+        </div>
+      </section>
+
+      <!-- ===== ABSCHLUSS-ZERTIFIKAT (statt code-section) ===== -->
+      <div class="completion-cert" id="code-section" style="display:none;">
+        <div class="cert-header">
+          <span class="cert-badge">&#127942; MISSION ERF&Uuml;LLT</span>
+          <h3>Dr. Zara Kern kann wieder forschen!</h3>
+        </div>
+        <p class="cert-text">Ihr habt alle sieben Labore durchdrungen und die KI-Verschl&uuml;sselung gebrochen. Die Forschungsdatenbanken sind frei &ndash; die lebensrettende Therapie kann entwickelt werden. Herzlichen Gl&uuml;ckwunsch!</p>
+        <div class="cert-nav">
+          <a href="../karte.html" class="btn-next">Zur Labor-&Uuml;bersicht &rarr;</a>
+          <a href="../index.html" class="home-btn">&larr; Startseite</a>
+        </div>
+        <div id="score-summary"></div>
+      </div>
+
+      <!-- ===== DISKUSSION ===== -->
+      <section class="discussion-block" aria-label="Diskussionsaufgabe">
+        <h2 class="discussion-title">&#128172; Diskussionsaufgabe</h2>
+        <p class="discussion-question">Darf oder sollte werdenden Eltern die M&ouml;glichkeit gegeben werden, vor oder w&auml;hrend einer Schwangerschaft genetische Tests durchzuf&uuml;hren (Pr&auml;implantationsdiagnostik / Pr&auml;natale Diagnostik)? Welche Chancen siehst du &ndash; und welche Risiken? Gibt es Grenzen, die du f&uuml;r wichtig h&auml;ltst? Denke dabei auch an die Perspektive von Menschen, die selbst mit einer genetischen Besonderheit wie dem Down-Syndrom leben.</p>
+        <p class="discussion-hint">Diskutiert in der Klasse oder schreibt eure Gedanken auf!</p>
+      </section>
+
+      <!-- ===== EXKURS ===== -->
+      <section class="exkurs-block" aria-label="Vertiefung">
+        <h2 class="exkurs-title">&#128301; Weiterforschen: Leben mit Down-Syndrom</h2>
+        <p>Das Informationsportal Touchdown 21 zeigt in leicht verst&auml;ndlicher Sprache, wie Menschen mit Down-Syndrom heute in Deutschland arbeiten, wohnen und leben &ndash; mit konkreten Beispielen und dem Fokus auf Selbstbestimmung und Inklusion.</p>
+        <a
+          href="https://touchdown21.info/de/seite/5-trisomie-21/article/345-wie-lebt-man-mit-dem-down-syndrom.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="exkurs-link"
+        >Zu Touchdown 21: Wie lebt man mit dem Down-Syndrom? &rarr;</a>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-copy">Zellen-Escape-Room NT9 &ndash; erstellt von Jonas Engeler</span>
+      <a href="../lehrer.html" class="footer-teacher-link">Lehrer-Login</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/app.js"></script>
+  <script>
+    var _at1 = 0, _at2 = 0, _at3 = 0, _at4 = 0;
+
+    // App initialisieren: Kapitel 7, 5 Aufgaben (kein Code-Wort)
+    initApp(7, 5);
+
+    // ─── completeTask: Aufgabe abschliessen, Sound + Stempel mit Guards ───
+    function completeTask(taskNr) {
+      var taskEl = document.getElementById('task-' + taskNr);
+      if (taskEl) taskEl.classList.add('completed');
+      var nb = document.getElementById('next-btn-' + taskNr);
+      if (nb) nb.classList.remove('hidden');
+      if (typeof playSound === 'function') playSound('correct');
+      if (typeof showStamp === 'function') showStamp(taskNr);
+      unlockNextTask(taskNr);
+    }
+
+    // ─── revealCodeSection: Zeigt das Abschluss-Zertifikat ───
+    function revealCodeSection() {
+      var cert = document.getElementById('code-section');
+      if (cert) {
+        cert.style.display = 'block';
+        cert.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      var sidebarItem = document.querySelector('.task-nav-item[data-task="fertig"]');
+      if (sidebarItem) {
+        sidebarItem.classList.remove('locked');
+        sidebarItem.classList.add('active');
+        var statusEl = sidebarItem.querySelector('.task-status');
+        if (statusEl) { statusEl.textContent = ''; }
+      }
+    }
+
+    // ─── showFeedback: Hilfsfunktion ───
+    function showFeedback(id, html, type) {
+      var el = document.getElementById(id);
+      if (!el) { return; }
+      el.className = 'feedback-box feedback-' + type;
+      el.innerHTML = html;
+      el.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 1 – Multiple Choice ───
+    function checkTask1() {
+      var selected = document.querySelector('input[name="q1"]:checked');
+      var feedbackEl = document.getElementById('feedback-1');
+      var nextBtn = document.getElementById('next-btn-1');
+
+      if (!selected) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte w\u00e4hle eine Antwort aus.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (selected.value === 'd') {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = '<strong>Richtig!</strong> Eine Mutation ist eine dauerhafte Ver\u00e4nderung der DNA-Sequenz \u2013 zum Beispiel ein falsch eingebauter Baustein oder ein verlorenes DNA-St\u00fcck. Solche Ver\u00e4nderungen k\u00f6nnen bei der Zellteilung entstehen, aber auch durch Strahlung oder Chemikalien ausgel\u00f6st werden.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at1 === 0 ? 2 : _at1 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(7, 1, _pts);
+        completeTask(1);
+      } else {
+        _at1++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht ganz. Mutationen sind keine vor\u00fcbergehenden Vorg\u00e4nge und betreffen auch nicht einzelne Proteine oder die Zellteilung als solche. Eine Mutation ist eine dauerhafte Ver\u00e4nderung der DNA-Sequenz \u2013 also des genetischen Textes in der Zelle.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 2 – Richtig/Falsch ───
+    function checkTask2() {
+      var feedbackEl = document.getElementById('feedback-2');
+      var nextBtn = document.getElementById('next-btn-2');
+
+      // Richtige Antworten: R, R, F
+      var correct = ['true', 'true', 'false'];
+      var allAnswered = true;
+      var allCorrect = true;
+
+      for (var i = 0; i < 3; i++) {
+        var sel = document.querySelector('input[name="tf2-' + i + '"]:checked');
+        if (!sel) {
+          allAnswered = false;
+          break;
+        }
+        if (sel.value !== correct[i]) {
+          allCorrect = false;
+        }
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte beantworte alle drei Aussagen.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = '<strong>Sehr gut!</strong> Trisomie 21 ist tats\u00e4chlich eine Chromosomenmutation (Chromosom 21 dreifach). H\u00e4mophilie ist eine Genmutation auf dem X-Chromosom. Und: Frauen k\u00f6nnen H\u00e4mophilie bekommen, wenn beide X-Chromosomen das fehlerhafte Gen tragen \u2013 auch wenn das selten ist.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at2 === 0 ? 2 : _at2 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(7, 2, _pts);
+        completeTask(2);
+      } else {
+        _at2++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht alle Aussagen sind korrekt bewertet. Denke genau nach: Trisomie 21 betrifft ein ganzes Chromosom (Chromosomenmutation). H\u00e4mophilie betrifft ein einzelnes Gen auf dem X-Chromosom (Genmutation). Frauen haben zwei X-Chromosomen \u2013 aber wenn beide das fehlerhafte Gen tragen, k\u00f6nnen auch sie erkranken.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 3 – Zuordnung endogen/exogen ───
+    function checkTask3() {
+      var feedbackEl = document.getElementById('feedback-3');
+      var nextBtn = document.getElementById('next-btn-3');
+
+      // Richtig: Endogen, Exogen, Exogen, Exogen, Endogen
+      var correct = ['Endogen', 'Exogen', 'Exogen', 'Exogen', 'Endogen'];
+      var allAnswered = true;
+      var allCorrect = true;
+
+      for (var i = 0; i < 5; i++) {
+        var sel = document.querySelector('input[name="z3-' + i + '"]:checked');
+        if (!sel) {
+          allAnswered = false;
+          break;
+        }
+        if (sel.value !== correct[i]) {
+          allCorrect = false;
+        }
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte ordne alle f\u00fcnf Ursachen zu.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = '<strong>Sehr gut!</strong> Du hast endogene und exogene Ursachen richtig unterschieden. Exogene Risiken wie UV-Strahlung oder Chemikalien lassen sich oft durch Verhalten reduzieren \u2013 endogene Kopierfehler hingegen sind zuf\u00e4llig und kaum vermeidbar.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at3 === 0 ? 2 : _at3 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(7, 3, _pts);
+        completeTask(3);
+      } else {
+        _at3++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = '\u00dcberpr\u00fcfe deine Zuordnungen noch einmal. Endogen bedeutet: der Fehler entsteht durch zelleigende Vorg\u00e4nge (z.\u00a0B. Kopierfehler, Teilungsfehler). Exogen bedeutet: der Ausl\u00f6ser kommt von au\u00dfen (z.\u00a0B. Strahlung, Chemikalien).';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 4 – Sortierung Insulin ───
+    function checkTask4() {
+      var feedbackEl = document.getElementById('feedback-4');
+      var nextBtn = document.getElementById('next-btn-4');
+
+      // Richtige Reihenfolge: Schritt 0 = Position 1, Schritt 1 = Position 2, usw.
+      var correct = ['1', '2', '3', '4', '5'];
+      var allAnswered = true;
+      var allCorrect = true;
+      var values = [];
+
+      for (var i = 0; i < 5; i++) {
+        var sel = document.getElementById('s4-' + i);
+        if (!sel || sel.value === '') {
+          allAnswered = false;
+          break;
+        }
+        values.push(sel.value);
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte w\u00e4hle f\u00fcr alle f\u00fcnf Schritte eine Position.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      // Pr\u00fcfe auf doppelte Positionen
+      var uniqueValues = values.filter(function(v, idx, arr) { return arr.indexOf(v) === idx; });
+      if (uniqueValues.length !== 5) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Jede Position (1\u20135) darf nur einmal vergeben werden. Bitte pr\u00fcfe deine Auswahl.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      for (var j = 0; j < 5; j++) {
+        if (values[j] !== correct[j]) {
+          allCorrect = false;
+          break;
+        }
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = '<strong>Hervorragend!</strong> Du hast die Schritte der gentechnischen Insulinherstellung richtig geordnet. Das Prinzip dahinter \u2013 ein fremdes Gen in ein Bakterium einbauen und es dort ablesen lassen \u2013 ist eine der wichtigsten Grundlagen moderner Biotechnologie. Seit 1982 wird so der weltweite Insulinbedarf gedeckt.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at4 === 0 ? 2 : _at4 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(7, 4, _pts);
+        completeTask(4);
+      } else {
+        _at4++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht ganz richtig. Denke an die Logik: Zuerst muss das Gen herausgeschnitten werden, bevor es eingebaut werden kann. Das Plasmid dient als Tr\u00e4ger, um das Gen ins Bakterium zu bringen. Erst danach kann das Bakterium das Insulin produzieren \u2013 und ganz am Ende steht die Reinigung.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 5 – Ethik (keine richtige Antwort) ───
+    function checkTask5() {
+      var feedbackEl = document.getElementById('feedback-5');
+      var nextBtn = document.getElementById('next-btn-5');
+
+      // Zeige immer Perspektiven aller Szenarien + Rechtslage, unabh\u00e4ngig von der Auswahl
+      var perspektivenHTML = '<strong>Du hast eine eigene Position eingenommen.</strong> In der Realit\u00e4t werden diese Fragen weltweit kontrovers diskutiert. In Deutschland ist die Keimbahntherapie gesetzlich verboten. Somatische Gentherapie ist unter strengen Auflagen erlaubt. PID ist nur in eng begrenzten Ausnahmef\u00e4llen zul\u00e4ssig. Keine Position ist einfach richtig oder falsch.'
+        + '<div class="perspektiven-block">'
+        + '<p><strong>Perspektiven zu den Szenarien:</strong></p>'
+        + '<div class="perspektive-card perspektive-dafuer"><h4>Szenario A \u2013 Korrektur einer Erbkrankheit: Daf\u00fcr</h4><p>Wenn eine schwere, lebensverк\u00fcrzende Erkrankung verhindert werden kann, sprechen medizinische und humanit\u00e4re Gr\u00fcnde f\u00fcr einen Eingriff. Das Leid des Kindes k\u00f6nnte erheblich reduziert werden.</p></div>'
+        + '<div class="perspektive-card perspektive-dagegen"><h4>Szenario A \u2013 Dagegen</h4><p>Eingriffe in die Keimbahn ver\u00e4ndern nicht nur das Kind selbst, sondern werden an alle Nachkommen weitergegeben. Die Langzeitfolgen sind unbekannt. Wer entscheidet, was \u201eschwer genug\u201c ist?</p></div>'
+        + '<div class="perspektive-card perspektive-dafuer"><h4>Szenario B \u2013 Verbesserung von Merkmalen: Daf\u00fcr</h4><p>Eltern haben ein nat\u00fcrliches Interesse am Wohlergehen ihrer Kinder. Wenn Technik hilft, Chancen zu verbessern, k\u00f6nnte das als Erweiterung elterlicher F\u00fcrsorge gesehen werden.</p></div>'
+        + '<div class="perspektive-card perspektive-dagegen"><h4>Szenario B \u2013 Dagegen</h4><p>Dies ist ein Eingriff ohne medizinische Notwendigkeit. Die meisten Ethikerinnen und Ethiker sowie Gesetze weltweit lehnen Enhancement ab. Es bestehen Risiken einer gesellschaftlichen Selektion: Wer hat Zugang? Wer gilt als \u201enormal\u201c?</p></div>'
+        + '<div class="perspektive-card perspektive-dafuer"><h4>Szenario C \u2013 Somatische Gentherapie: Daf\u00fcr</h4><p>Somatische Gentherapie gilt in der Medizin als ethisch weniger problematisch, da keine Weitergabe an Nachkommen erfolgt. Es ist ein Eingriff am eigenen K\u00f6rper mit eigenem Einverst\u00e4ndnis.</p></div>'
+        + '<div class="perspektive-card perspektive-dagegen"><h4>Szenario C \u2013 Dagegen</h4><p>Wie bei jeder medizinischen Behandlung gibt es Risiken und Nebenwirkungen, die noch nicht vollst\u00e4ndig erforscht sind. Langzeitstudien fehlen.</p></div>'
+        + '<div class="perspektive-card perspektive-dafuer"><h4>Szenario D \u2013 PID (Down-Syndrom): Daf\u00fcr</h4><p>Eltern, die wissen, dass sie Tr\u00e4ger von Erbkrankheiten sind, k\u00f6nnen durch PID eine bewusste Entscheidung treffen. Bef\u00fcrworter sehen es als Erweiterung reproduktiver Autonomie.</p></div>'
+        + '<div class="perspektive-card perspektive-dagegen"><h4>Szenario D \u2013 Dagegen</h4><p>Selbstvertretungsorganisationen von Menschen mit Down-Syndrom betonen, dass ihr Leben lebenswert und wertvoll ist. PID kann die gesellschaftliche Botschaft senden, bestimmte Menschen seien \u201eunerwünscht\u201c. Natalie Dedreux und andere Aktivistinnen sprechen sich deshalb \u00f6ffentlich gegen PID aus.</p></div>'
+        + '<div class="rechtslage-box"><h4>Rechtslage in Deutschland</h4><p>Keimbahntherapie (Eingriff in vererbbare Gene): <strong>gesetzlich verboten</strong>. Somatische Gentherapie (an K\u00f6rperzellen): unter strengen Auflagen <strong>erlaubt</strong>. Pr\u00e4implantationsdiagnostik (PID): nur in eng begrenzten Ausnahmef\u00e4llen <strong>zul\u00e4ssig</strong>.</p></div>'
+        + '</div>';
+
+      showFeedback('feedback-5', perspektivenHTML, 'correct');
+      nextBtn.classList.remove('hidden');
+      if (typeof awardPoints === 'function') awardPoints(7, 5, 2);
+      completeTask(5);
+      revealCodeSection();
+      showFinalScore();
+    }
+
+    // ─── showFinalScore: Punktestand im Zertifikat anzeigen ───
+    function showFinalScore() {
+      var el = document.getElementById('score-summary');
+      if (!el) return;
+      var total   = typeof getTotalPoints === 'function' ? getTotalPoints() : 0;
+      var max     = typeof getMaxPossiblePoints === 'function' ? getMaxPossiblePoints() : 70;
+      var pct     = max > 0 ? Math.round(total / max * 100) : 0;
+      var lvl     = typeof getLevel === 'function' ? getLevel(pct) : { label: '', stars: '', color: '#c9a227' };
+      el.innerHTML =
+        '<div class="score-result-block">' +
+          '<div class="score-result-stars" style="color:' + lvl.color + '">' + lvl.stars + '</div>' +
+          '<div class="score-result-label" style="color:' + lvl.color + '">' + lvl.label + '</div>' +
+          '<div class="score-result-pts">' + total + '&thinsp;/&thinsp;' + max + ' Punkte &nbsp;(' + pct + '%)</div>' +
+          '<div class="score-result-breakdown">' +
+            '<span style="color:#27ae60">90\u2013100\u00a0%: Expert:in</span> &middot; ' +
+            '<span style="color:#2980b9">80\u201389\u00a0%: Fortgeschrittene:r</span> &middot; ' +
+            '<span style="color:#27ae60">70\u201379\u00a0%: Kompetent</span> &middot; ' +
+            '<span style="color:#e67e22">60\u201369\u00a0%: Lernende:r</span> &middot; ' +
+            '<span style="color:#9b2226">&lt;60\u00a0%: Einsteiger:in</span>' +
+          '</div>' +
+        '</div>';
+    }
+
+    // ─── unlockNextTask: N\u00e4chste Aufgabe freischalten ───
+    function unlockNextTask(taskNr) {
+      var next;
+      if (taskNr === 5) {
+        next = document.querySelector('.task-nav-item[data-task="fertig"]');
+      } else {
+        next = document.querySelector('.task-nav-item[data-task="' + (taskNr + 1) + '"]');
+      }
+      if (next && next.classList.contains('locked')) {
+        next.classList.remove('locked');
+        var statusEl = next.querySelector('.task-status');
+        if (statusEl) { statusEl.textContent = ''; }
+      }
+    }
+
+    // ─── goToTask: Scrollt zur angegebenen Aufgabe ───
+    function goToTask(taskNr) {
+      var target;
+      if (taskNr === 'fertig' || taskNr === 'code') {
+        target = document.getElementById('code-section');
+      } else {
+        target = document.getElementById('task-' + taskNr);
+      }
+      if (target) {
+        target.classList.add('visible');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      // Sidebar-Item aktivieren
+      var sidebarItems = document.querySelectorAll('.task-nav-item');
+      sidebarItems.forEach(function(item) { item.classList.remove('active'); });
+      var activeItem;
+      if (taskNr === 'fertig' || taskNr === 'code') {
+        activeItem = document.querySelector('.task-nav-item[data-task="fertig"]');
+      } else {
+        activeItem = document.querySelector('.task-nav-item[data-task="' + taskNr + '"]');
+      }
+      if (activeItem) { activeItem.classList.add('active'); }
+    }
+  </script>
+
+</body>
+</html>

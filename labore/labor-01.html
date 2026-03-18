@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Labor 1: Was ist Leben?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="mappe-page">
+
+  <!-- HEADER mit Chapter-Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="header-icon">🔬</span>
+        <span class="header-title">Zellen-Escape-Room NT9</span>
+      </div>
+      <nav class="chapter-nav" aria-label="Labornavigation">
+        <a href="labor-01.html" class="chapter-circle active" title="Labor 1: Was ist Leben?">1</a>
+        <a href="labor-02.html" class="chapter-circle locked" title="Labor 2">2</a>
+        <a href="labor-03.html" class="chapter-circle locked" title="Labor 3">3</a>
+        <a href="labor-04.html" class="chapter-circle locked" title="Labor 4">4</a>
+        <a href="labor-05.html" class="chapter-circle locked" title="Labor 5">5</a>
+        <a href="labor-06.html" class="chapter-circle locked" title="Labor 6">6</a>
+        <a href="labor-07.html" class="chapter-circle locked" title="Labor 7">7</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAPPE-BANNER -->
+  <div class="mappe-banner">
+    <div class="mappe-banner-inner">
+      <span class="mappe-label">Labor 1</span>
+      <h1 class="mappe-title">Was ist Leben?</h1>
+    </div>
+  </div>
+
+  <!-- HAUPTLAYOUT -->
+  <div class="layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="task-sidebar">
+      <h2 class="sidebar-heading">Aufgaben</h2>
+      <ul class="task-nav-list">
+        <li class="task-nav-item active" data-task="1">
+          <span class="task-status"></span>
+          <span class="task-nav-title">Was alle Lebewesen gemeinsam haben</span>
+        </li>
+        <li class="task-nav-item locked" data-task="2">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Richtig oder Falsch?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="3">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Prokaryot oder Eukaryot?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="4">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Merkmale aller Zellen</span>
+        </li>
+        <li class="task-nav-item locked" data-task="5">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Ist Feuer lebendig?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="code">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Labor öffnen</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- HAUPTINHALT -->
+    <main class="content-area">
+
+      <!-- NARRATIVE EINLEITUNG -->
+      <div class="archive-context">
+        <div class="archive-context-inner">
+          <h2 class="archive-context-title">Datenbank 1 – Grundlagenforschung</h2>
+          <p>Dr. Zara Kerns erste verschlüsselte Datenbank enthält die Grundlagenforschung über das Fundament des Lebens selbst. Die KI-Nachricht lautet:</p>
+          <blockquote class="ki-message">
+            „Beweise, dass du weißt, was alle Lebewesen verbindet – vom kleinsten Bakterium bis zum größten Elefanten."
+          </blockquote>
+          <p>Löst die Aufgaben, um den Zugang zur Datenbank zu entschlüsseln und Dr. Kern weiterzuhelfen!</p>
+        </div>
+      </div>
+
+      <!-- INFORMATIONSTEXT -->
+      <section class="info-text-section">
+        <h2 class="section-title">Informationstext</h2>
+        <div class="info-text-card">
+          <p>Was haben ein Elefant, ein Mensch, eine Eiche und ein Bakterium gemeinsam? Sie alle bestehen aus Zellen – dem kleinsten <strong>BAUSTEIN</strong> des Lebens. Ob Tier, Pflanze oder Mikroorganismus: Keine Form des Lebens auf der Erde kommt ohne Zellen aus.</p>
+
+          <p>Zellen sind winzig klein – die meisten messen nur etwa 1/100 Millimeter (10–30 Mikrometer). Zum Vergleich: Ein menschliches Haar ist rund zehnmal dicker. Trotz ihrer Größe steckt in jeder Zelle ein vollständiges „Programm" für alle lebensnotwendigen Vorgänge.</p>
+
+          <p>Biologen unterscheiden zwei grundlegende Zelltypen:</p>
+          <ul>
+            <li><strong>Prokaryoten</strong> (z. B. Bakterien): Diese Zellen besitzen keinen echten Zellkern. Das Erbmaterial liegt frei im Zellplasma vor. Sie sind die ältesten Lebensformen der Erde.</li>
+            <li><strong>Eukaryoten</strong> (z. B. Tier-, Pflanzen- und Pilzzellen): Diese Zellen haben einen von einer Membran umhüllten Zellkern, in dem die DNA gespeichert ist. Sie besitzen außerdem spezialisierte Zellorganellen wie Mitochondrien.</li>
+          </ul>
+
+          <p>Obwohl sich Prokaryoten und Eukaryoten stark unterscheiden, teilen sie fundamentale Gemeinsamkeiten: Alle Zellen haben eine Zellmembran, Erbmaterial (DNA) und Ribosomen. Leben ist auf molekularer Ebene überraschend einheitlich – vom Bakterium bis zum Menschen.</p>
+
+          <hr class="info-divider">
+
+          <p class="alltagsbezug">Dein Körper besteht aus etwa 30 Billionen Zellen – das ist eine 3 mit 13 Nullen. Würde man alle deine Körperzellen aneinanderreihen, ergäbe das eine Kette von etwa 300 000 km Länge – fast die Entfernung zum Mond! Trotzdem begann auch dein Leben als eine einzige befruchtete Eizelle.</p>
+
+          <p>Dr. Zara Kern erforscht genau das: Was passiert, wenn ein einzelner dieser winzigen Bausteine einen Fehler im Erbmaterial trägt? Bei bestimmten Erbkrankheiten ist ein einziger defekter Bauplan in Millionen von Zellen verheerend. Deshalb ist jede verschlüsselte Datenbank im Labor ein weiteres Hindernis auf dem Weg zur rettenden Therapie.</p>
+
+          <div class="dokument-karte">
+            <div class="dokument-karte-header">Labornotiz – Dr. Zara Kern</div>
+            <p>Das Code-Wort für diese Datenbank lautet: <strong>BAUSTEIN</strong></p>
+            <p class="dokument-karte-hinweis">„Die Zelle ist der kleinste <strong>BAUSTEIN</strong> des Lebens – das Fundament, auf dem alles andere aufbaut. Wer das versteht, versteht das Leben." – Dr. Z. Kern</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STRATEGIE-KOFFER -->
+      <details class="strategie-koffer">
+        <summary class="strategie-koffer-summary">
+          <span class="koffer-icon">🧰</span> Strategie-Koffer – Tipps für diese Aufgaben
+        </summary>
+        <div class="strategie-koffer-content">
+          <ul>
+            <li>Lies den Informationstext zuerst vollständig, bevor du die Aufgaben bearbeitest – viele Antworten stehen direkt im Text.</li>
+            <li>Bei Zuordnungsaufgaben: Beginne mit den Begriffen, bei denen du dir sicher bist, und leite die übrigen durch Ausschluss ab.</li>
+            <li>Bei der Schwer-Aufgabe (★★★): Nutze zuerst Tipp 1, bevor du Tipp 2 aufdeckst – so lernst du mehr, als wenn du sofort nachschaust.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- ===== AUFGABE 1 ===== -->
+      <section id="task-1" class="task-block visible" aria-label="Aufgabe 1">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 1</span>
+          <span class="task-difficulty">★☆☆</span>
+        </div>
+        <h3 class="task-question">Was haben ein Elefant, ein Mensch, eine Eiche und ein Bakterium gemeinsam? Im Text steht, dass sie alle aus demselben Grundelement aufgebaut sind. Was ist das?</h3>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="radio" name="q1" value="a">
+            <span class="option-text">a) Sie bestehen alle aus Atomen</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="b">
+            <span class="option-text">b) Sie bestehen alle aus Zellen</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="c">
+            <span class="option-text">c) Sie besitzen alle einen Zellkern</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="d">
+            <span class="option-text">d) Sie alle haben Organe</span>
+          </label>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask1()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-1" class="feedback-box hidden"></div>
+
+        <div id="next-btn-1" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(2)">Weiter zu Aufgabe 2 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 2 ===== -->
+      <section id="task-2" class="task-block" aria-label="Aufgabe 2">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 2</span>
+          <span class="task-difficulty">★☆☆</span>
+        </div>
+        <h3 class="task-question">Entscheide für jede Aussage, ob sie laut dem Informationstext richtig oder falsch ist.</h3>
+
+        <div class="task-table-wrap">
+          <table class="rf-table">
+            <thead>
+              <tr>
+                <th class="rf-col-statement">Aussage</th>
+                <th class="rf-col-choice">Richtig</th>
+                <th class="rf-col-choice">Falsch</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Die meisten Zellen messen etwa 1/100 Millimeter (10–30 Mikrometer).</td>
+                <td class="rf-radio"><input type="radio" name="tf2-0" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-0" value="false"></td>
+              </tr>
+              <tr>
+                <td>Alle Zellen – egal ob Prokaryot oder Eukaryot – besitzen eine Zellmembran, DNA und Ribosomen.</td>
+                <td class="rf-radio"><input type="radio" name="tf2-1" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-1" value="false"></td>
+              </tr>
+              <tr>
+                <td>Prokaryoten besitzen einen von einer Membran umhüllten Zellkern.</td>
+                <td class="rf-radio"><input type="radio" name="tf2-2" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-2" value="false"></td>
+              </tr>
+              <tr>
+                <td>Der menschliche Körper besteht aus etwa 30 Millionen Zellen.</td>
+                <td class="rf-radio"><input type="radio" name="tf2-3" value="true"></td>
+                <td class="rf-radio"><input type="radio" name="tf2-3" value="false"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask2()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-2" class="feedback-box hidden"></div>
+
+        <div id="next-btn-2" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(3)">Weiter zu Aufgabe 3 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 3 ===== -->
+      <section id="task-3" class="task-block" aria-label="Aufgabe 3">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 3</span>
+          <span class="task-difficulty">★★☆</span>
+        </div>
+        <h3 class="task-question">Ordne jeden Begriff dem richtigen Zelltyp zu: Prokaryot oder Eukaryot?</h3>
+
+        <div class="zuordnung-list">
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Bakterium</span>
+            <select class="zuordnung-select" id="z3-0">
+              <option value="">– bitte wählen –</option>
+              <option value="Prokaryot">Prokaryot</option>
+              <option value="Eukaryot">Eukaryot</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Pflanzenzelle</span>
+            <select class="zuordnung-select" id="z3-1">
+              <option value="">– bitte wählen –</option>
+              <option value="Prokaryot">Prokaryot</option>
+              <option value="Eukaryot">Eukaryot</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Tierzelle</span>
+            <select class="zuordnung-select" id="z3-2">
+              <option value="">– bitte wählen –</option>
+              <option value="Prokaryot">Prokaryot</option>
+              <option value="Eukaryot">Eukaryot</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Erbmaterial liegt frei im Zellplasma vor</span>
+            <select class="zuordnung-select" id="z3-3">
+              <option value="">– bitte wählen –</option>
+              <option value="Prokaryot">Prokaryot</option>
+              <option value="Eukaryot">Eukaryot</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Besitzt Mitochondrien</span>
+            <select class="zuordnung-select" id="z3-4">
+              <option value="">– bitte wählen –</option>
+              <option value="Prokaryot">Prokaryot</option>
+              <option value="Eukaryot">Eukaryot</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Älteste Lebensform der Erde</span>
+            <select class="zuordnung-select" id="z3-5">
+              <option value="">– bitte wählen –</option>
+              <option value="Prokaryot">Prokaryot</option>
+              <option value="Eukaryot">Eukaryot</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask3()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-3" class="feedback-box hidden"></div>
+
+        <div id="next-btn-3" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(4)">Weiter zu Aufgabe 4 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 4 ===== -->
+      <section id="task-4" class="task-block" aria-label="Aufgabe 4">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 4</span>
+          <span class="task-difficulty">★★☆</span>
+        </div>
+        <h3 class="task-question">Dr. Zara Kern erklärt ihrem Team: „Obwohl Prokaryoten und Eukaryoten sehr verschieden sind, teilen sie bestimmte grundlegende Merkmale." Welche der folgenden Merkmale besitzen ALLE Zellen – also sowohl Prokaryoten als auch Eukaryoten? (Mehrere Antworten richtig)</h3>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="checkbox" name="q4" value="a">
+            <span class="option-text">a) Eine Zellmembran, die das Innere nach außen abgrenzt</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q4" value="b">
+            <span class="option-text">b) Einen von einer Membran umhüllten Zellkern</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q4" value="c">
+            <span class="option-text">c) Erbmaterial in Form von DNA</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q4" value="d">
+            <span class="option-text">d) Ribosomen zur Herstellung von Proteinen</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q4" value="e">
+            <span class="option-text">e) Spezialisierte Organellen wie Mitochondrien</span>
+          </label>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask4()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-4" class="feedback-box hidden"></div>
+
+        <div id="next-btn-4" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(5)">Weiter zu Aufgabe 5 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 5 ===== -->
+      <section id="task-5" class="task-block" aria-label="Aufgabe 5">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 5</span>
+          <span class="task-difficulty">★★★</span>
+        </div>
+        <h3 class="task-question">Ein Schüler behauptet: „Feuer ist auch lebendig – es atmet Sauerstoff, wächst, bewegt sich und vermehrt sich sogar!" Welche der folgenden Aussagen helfen dabei, diese Behauptung zu widerlegen und zu zeigen, dass Feuer KEIN Lebewesen ist? (Mehrere Antworten richtig)</h3>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="a">
+            <span class="option-text">a) Feuer besteht aus keinen Zellen – Lebewesen bestehen immer aus mindestens einer Zelle</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="b">
+            <span class="option-text">b) Feuer bewegt sich, also könnte es ein Lebewesen sein</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="c">
+            <span class="option-text">c) Feuer besitzt keine DNA und kann keine Erbinformation weitergeben</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="d">
+            <span class="option-text">d) Feuer hat keine Zellmembran und kann seine innere Umgebung nicht regulieren</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="e">
+            <span class="option-text">e) Feuer wird größer, wenn man Holz hinzufügt – das ist kein echtes Wachstum aus eigenem Stoffwechsel</span>
+          </label>
+        </div>
+
+        <div class="task-tipps">
+          <details class="tipp-details">
+            <summary class="tipp-summary">💡 Tipp 1</summary>
+            <p class="tipp-text">Denke an die drei Merkmale, die alle Zellen gemeinsam haben (Zellmembran, DNA, Ribosomen). Welche davon besitzt Feuer? Und: Was ist der Unterschied zwischen chemischer Reaktion und biologischem Stoffwechsel?</p>
+          </details>
+          <details class="tipp-details">
+            <summary class="tipp-summary">💡 Tipp 2</summary>
+            <p class="tipp-text">Feuer hat weder Zellen noch DNA – damit fallen zwei der drei universellen Zellmerkmale weg. Das 'Wachstum' von Feuer entsteht durch eine Oxidationsreaktion (Verbrennung), nicht durch Zellteilung oder Stoffwechsel. Antwort b) ist falsch, weil Bewegung allein kein Lebensmerkmal ist – auch Flüsse und Wolken bewegen sich.</p>
+          </details>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask5()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-5" class="feedback-box hidden"></div>
+
+        <div id="next-btn-5" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask('code')">Zum Code-Eingabe-Bereich →</button>
+        </div>
+      </section>
+
+      <!-- ===== CODE-EINGABE ===== -->
+      <section id="code-section" class="code-section" aria-label="Labor öffnen">
+        <div class="code-section-inner">
+          <h2 class="code-section-title">🔐 Labor öffnen</h2>
+          <p class="code-section-desc">Ihr habt alle Aufgaben gelöst! Gebt jetzt das Code-Wort ein, das ihr im Informationstext gefunden habt, um die Datenbank zu entschlüsseln und Labor 2 freizuschalten.</p>
+          <div class="code-input-wrap">
+            <input
+              type="text"
+              id="code-input"
+              class="code-input"
+              placeholder="Code-Wort eingeben …"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="characters"
+              spellcheck="false"
+            >
+            <button class="btn-code-check" onclick="checkCode()">Entsperren</button>
+          </div>
+          <div id="feedback-code" class="feedback-box hidden"></div>
+        </div>
+      </section>
+
+      <!-- ===== DISKUSSION ===== -->
+      <section class="discussion-block" aria-label="Diskussionsaufgabe">
+        <h2 class="discussion-title">💬 Diskussionsaufgabe</h2>
+        <p class="discussion-question">Stellt euch vor, Wissenschaftler entdecken auf einem anderen Planeten winzige Strukturen, die sich vermehren und auf ihre Umgebung reagieren – aber keine DNA besitzen und nicht aus Zellen bestehen. Sind das Lebewesen? Was würde das über unsere bisherige Definition von „Leben" aussagen?</p>
+        <p class="discussion-hint">Diskutiert in der Klasse oder schreibt eure Gedanken auf!</p>
+      </section>
+
+      <!-- ===== EXKURS ===== -->
+      <section class="exkurs-block" aria-label="Vertiefung">
+        <h2 class="exkurs-title">🔭 Weiterforschen: VR/AR-Lernspiel Körperzelle</h2>
+        <p>Planet Schule bietet ein interaktives AR/VR-Lernspiel zur menschlichen Körperzelle an. Mit einer kostenlosen App (Android &amp; iOS) könnt ihr virtuell in eine Zelle eintauchen und die verschiedenen Zellorganellen erkunden – ohne Anmeldung nutzbar.</p>
+        <a
+          href="https://www.planet-schule.de/thema/koerperzelle-vr-ar-lernspiel-100.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="exkurs-link"
+        >Zum Lernspiel auf Planet Schule →</a>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-copy">Zellen-Escape-Room NT9 – erstellt von Jonas Engeler</span>
+      <a href="../lehrer.html" class="footer-teacher-link">Lehrer-Login</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/app.js"></script>
+  <script>
+    var _at1 = 0, _at2 = 0, _at3 = 0, _at4 = 0, _at5 = 0;
+    // App initialisieren: Kapitel 1, 5 Aufgaben
+    initApp(1, 5);
+
+    // Code-Wort für dieses Labor
+    const MAPPE_CODE = 'BAUSTEIN';
+
+    // ─── completeTask: Aufgabe abschliessen, Sound + Stempel mit Guards ───
+    function completeTask(taskNr) {
+      var taskEl = document.getElementById('task-' + taskNr);
+      if (taskEl) taskEl.classList.add('completed');
+      var nb = document.getElementById('next-btn-' + taskNr);
+      if (nb) nb.classList.remove('hidden');
+      var navItem = document.querySelector('.task-nav-item[data-task="' + taskNr + '"]');
+      if (navItem) {
+        navItem.classList.remove('active', 'locked');
+        navItem.classList.add('completed');
+        var st = navItem.querySelector('.task-status');
+        if (st) st.textContent = '✓';
+      }
+      var nextItem = document.querySelector('.task-nav-item[data-task="' + (taskNr + 1) + '"]');
+      if (nextItem) {
+        nextItem.classList.remove('locked');
+        var ns = nextItem.querySelector('.task-status');
+        if (ns) ns.textContent = '';
+      }
+      if (typeof playSound === 'function') playSound('correct');
+      if (typeof showStamp === 'function') showStamp(taskNr);
+    }
+
+    // ─── AUFGABE 1 – Multiple Choice ───
+    function checkTask1() {
+      var selected = document.querySelector('input[name="q1"]:checked');
+      var feedbackEl = document.getElementById('feedback-1');
+      var nextBtn = document.getElementById('next-btn-1');
+
+      if (!selected) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte wähle eine Antwort aus.';
+        return;
+      }
+
+      if (selected.value === 'b') {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = 'Genau! Die Zelle ist der kleinste <strong>BAUSTEIN</strong> des Lebens – alle bekannten Lebewesen auf der Erde bestehen aus Zellen, vom einfachsten Bakterium bis zum komplexen Säugetier.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at1 === 0 ? 2 : _at1 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(1, 1, _pts);
+        completeTask(1);
+      } else {
+        _at1++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Lies den ersten Absatz des Textes noch einmal sorgfältig. Was wird dort als das gemeinsame Merkmal aller Lebewesen genannt? Das gesuchte Wort steht sogar fett gedruckt im Text.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 2 – Richtig/Falsch ───
+    function checkTask2() {
+      var feedbackEl = document.getElementById('feedback-2');
+      var nextBtn = document.getElementById('next-btn-2');
+
+      var correct = ['true', 'true', 'false', 'false'];
+      var allAnswered = true;
+      var allCorrect = true;
+
+      for (var i = 0; i < 4; i++) {
+        var sel = document.querySelector('input[name="tf2-' + i + '"]:checked');
+        if (!sel) {
+          allAnswered = false;
+          break;
+        }
+        if (sel.value !== correct[i]) {
+          allCorrect = false;
+        }
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte beantworte alle vier Aussagen.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Sehr gut! Du hast alle Aussagen korrekt bewertet. Prokaryoten haben kein von einer Membran umhülltes Zellkern – ihr Erbmaterial liegt frei im Zellplasma. Und der Mensch besteht aus 30 Billionen (nicht Millionen) Zellen.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at2 === 0 ? 2 : _at2 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(1, 2, _pts);
+        completeTask(2);
+      } else {
+        _at2++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht ganz. Vergleiche die Aussagen noch einmal mit dem Text: Achte besonders auf den Unterschied zwischen Prokaryoten und Eukaryoten sowie auf die Größenangabe der Zellen und die Zahl der Körperzellen des Menschen (Billionen ≠ Millionen).';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 3 – Zuordnung ───
+    function checkTask3() {
+      var feedbackEl = document.getElementById('feedback-3');
+      var nextBtn = document.getElementById('next-btn-3');
+
+      var correctAnswers = ['Prokaryot', 'Eukaryot', 'Eukaryot', 'Prokaryot', 'Eukaryot', 'Prokaryot'];
+      var allAnswered = true;
+      var allCorrect = true;
+
+      for (var i = 0; i < 6; i++) {
+        var sel = document.getElementById('z3-' + i);
+        if (!sel || sel.value === '') {
+          allAnswered = false;
+          break;
+        }
+        if (sel.value !== correctAnswers[i]) {
+          allCorrect = false;
+        }
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte ordne alle sechs Begriffe zu.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Ausgezeichnet! Du hast die beiden Zelltypen korrekt unterschieden. Das entscheidende Merkmal: Prokaryoten haben keinen echten, membranumhüllten Zellkern – ihr Erbmaterial liegt frei im Zellplasma. Eukaryoten dagegen schützen ihre DNA in einem Zellkern und besitzen spezialisierte Organellen wie Mitochondrien.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at3 === 0 ? 2 : _at3 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(1, 3, _pts);
+        completeTask(3);
+      } else {
+        _at3++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Überprüfe deine Zuordnungen. Der entscheidende Unterschied zwischen den beiden Zelltypen ist das Vorhandensein eines echten Zellkerns: Eukaryoten haben einen membranumhüllten Zellkern, Prokaryoten nicht. Bakterien sind immer Prokaryoten; Tier-, Pflanzen- und Pilzzellen sind Eukaryoten.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 4 – Mehrfachauswahl ───
+    function checkTask4() {
+      var feedbackEl = document.getElementById('feedback-4');
+      var nextBtn = document.getElementById('next-btn-4');
+
+      var checked = Array.from(document.querySelectorAll('input[name="q4"]:checked')).map(function(el) { return el.value; });
+      var correct = ['a', 'c', 'd'];
+
+      if (checked.length === 0) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte wähle mindestens eine Antwort aus.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      var isCorrect = correct.length === checked.length &&
+        correct.every(function(v) { return checked.indexOf(v) !== -1; });
+
+      if (isCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Richtig! Zellmembran, DNA und Ribosomen sind die drei universellen Gemeinsamkeiten aller Zellen – der gemeinsame Nenner allen Lebens. Ein membranumhüllter Zellkern (b) und Mitochondrien (e) sind Merkmale, die nur Eukaryoten besitzen.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at4 === 0 ? 2 : _at4 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(1, 4, _pts);
+        completeTask(4);
+      } else {
+        _at4++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht alle gewählten Merkmale treffen auf beide Zelltypen zu. Überlege: Was unterscheidet Prokaryoten von Eukaryoten? Merkmale wie Zellkern und Mitochondrien sind nur bei Eukaryoten zu finden. Welche drei Strukturen nennt der Text als gemeinsame Basis aller Zellen?';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 5 – Mehrfachauswahl ───
+    function checkTask5() {
+      var feedbackEl = document.getElementById('feedback-5');
+      var nextBtn = document.getElementById('next-btn-5');
+
+      var checked = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(function(el) { return el.value; });
+      var correct = ['a', 'c', 'd', 'e'];
+
+      if (checked.length === 0) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte wähle mindestens eine Antwort aus.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      var isCorrect = correct.length === checked.length &&
+        correct.every(function(v) { return checked.indexOf(v) !== -1; });
+
+      if (isCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Sehr gut durchdacht! Feuer zeigt zwar einige oberflächliche Ähnlichkeiten mit Lebewesen (Bewegung, Wachstum, Sauerstoffverbrauch), erfüllt aber die grundlegenden Kriterien nicht: Es besteht aus keinen Zellen, hat keine DNA, keine Zellmembran und sein "Wachstum" ist eine rein chemische Reaktion ohne Stoffwechsel. Lebensprozesse erfordern zelluläre Organisation.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at5 === 0 ? 2 : _at5 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(1, 5, _pts);
+        completeTask(5);
+      } else {
+        _at5++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Denke genauer darüber nach, was Lebewesen auf zellulärer und molekularer Ebene auszeichnet. Es geht nicht nur um äußerlich sichtbare Vorgänge wie Bewegung oder Wachstum, sondern um die innere Organisation: Haben Lebewesen nicht alle Zellen, DNA und eine Möglichkeit, ihre innere Umgebung zu kontrollieren?';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── CODE-EINGABE ───
+    function checkCode() {
+      var input = document.getElementById('code-input');
+      var feedbackEl = document.getElementById('feedback-code');
+      var entered = input.value.trim().toUpperCase();
+
+      if (!entered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte gib das Code-Wort ein.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (entered === MAPPE_CODE) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = '<strong>Datenbank 1 erfolgreich entschlüsselt!</strong> Das Code-Wort <strong>BAUSTEIN</strong> war korrekt. Labor 2 ist jetzt freigeschaltet!';
+        feedbackEl.classList.remove('hidden');
+        if (typeof playSound === 'function') {
+          playSound('unlock');
+        }
+        if (typeof unlockNextMappe === 'function') {
+          unlockNextMappe(1);
+        }
+      } else {
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Das Code-Wort ist nicht korrekt. Tipp: Du suchst den Grundbaustein aller Lebewesen – die kleinste lebendige Einheit, aus der ausnahmslos jeder Organismus aufgebaut ist.';
+        feedbackEl.classList.remove('hidden');
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    // Enter-Taste in Code-Eingabe
+    document.getElementById('code-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        checkCode();
+      }
+    });
+  </script>
+
+</body>
+</html>

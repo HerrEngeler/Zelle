@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Labor 4: Der Motor der Zelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="mappe-page">
+
+  <!-- HEADER mit Chapter-Navigation -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <span class="header-icon">🔬</span>
+        <span class="header-title">Zellen-Escape-Room NT9</span>
+      </div>
+      <nav class="chapter-nav" aria-label="Labornavigation">
+        <a href="labor-01.html" class="chapter-circle" title="Labor 1">1</a>
+        <a href="labor-02.html" class="chapter-circle" title="Labor 2">2</a>
+        <a href="labor-03.html" class="chapter-circle" title="Labor 3">3</a>
+        <a href="labor-04.html" class="chapter-circle active" title="Labor 4: Der Motor der Zelle">4</a>
+        <a href="labor-05.html" class="chapter-circle locked" title="Labor 5">5</a>
+        <a href="labor-06.html" class="chapter-circle locked" title="Labor 6">6</a>
+        <a href="labor-07.html" class="chapter-circle locked" title="Labor 7">7</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAPPE-BANNER -->
+  <div class="mappe-banner">
+    <div class="mappe-banner-inner">
+      <span class="mappe-label">Labor 4</span>
+      <h1 class="mappe-title">Der Motor der Zelle</h1>
+    </div>
+  </div>
+
+  <!-- HAUPTLAYOUT -->
+  <div class="layout-wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="task-sidebar">
+      <h2 class="sidebar-heading">Aufgaben</h2>
+      <ul class="task-nav-list">
+        <li class="task-nav-item active" data-task="1">
+          <span class="task-status"></span>
+          <span class="task-nav-title">Wortgleichung der Zellatmung</span>
+        </li>
+        <li class="task-nav-item locked" data-task="2">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Richtig oder Falsch?</span>
+        </li>
+        <li class="task-nav-item locked" data-task="3">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Hefe-Ballon-Experiment</span>
+        </li>
+        <li class="task-nav-item locked" data-task="4">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Stoffe zuordnen</span>
+        </li>
+        <li class="task-nav-item locked" data-task="5">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Essen UND Atmen</span>
+        </li>
+        <li class="task-nav-item locked" data-task="code">
+          <span class="task-status">🔒</span>
+          <span class="task-nav-title">Labor öffnen</span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- HAUPTINHALT -->
+    <main class="content-area">
+
+      <!-- NARRATIVE EINLEITUNG -->
+      <div class="archive-context">
+        <div class="archive-context-inner">
+          <h2 class="archive-context-title">Datenbank 4 – Energieforschung</h2>
+          <p>Dr. Zara Kerns Labor steckt voller Hinweise – und einer davon führt direkt zum nächsten Code. Doch zuerst muss die verschlüsselte Energiedatenbank geöffnet werden. Die KI-Nachricht lautet:</p>
+          <blockquote class="ki-message">
+            „Beweise, dass du weißt, wo die Energie des Lebens entsteht – und nenne den Motor, ohne den keine Zelle überleben kann."
+          </blockquote>
+          <p>Löst die Aufgaben zur Zellatmung und zu den Mitochondrien, um die Datenbank zu entschlüsseln und Dr. Kern weiterzuhelfen!</p>
+        </div>
+      </div>
+
+      <!-- INFORMATIONSTEXT -->
+      <section class="info-text-section">
+        <h2 class="section-title">Informationstext</h2>
+        <div class="info-text-card">
+          <p>Jede Zelle deines Körpers braucht ständig Energie – zum Denken, Bewegen, Wachsen. Diese Energie liefert die <strong>Zellatmung</strong>: Ein biochemischer Prozess, bei dem Traubenzucker (Glucose) zusammen mit Sauerstoff in der Zelle &bdquo;verbrannt&ldquo; wird.</p>
+
+          <p><strong>Wortgleichung der Zellatmung:</strong><br>
+          Traubenzucker + Sauerstoff &rarr; Kohlenstoffdioxid + Wasser + Energie</p>
+
+          <p>Die gewonnene Energie wird in Form von ATP (Adenosintriphosphat) gespeichert – dem universellen &bdquo;Energietr&auml;ger&ldquo; der Zelle.</p>
+
+          <p>Der Ort, an dem das passiert, ist ein faszinierendes Zellorganell: das <strong>MITOCHONDRIUM</strong> (Mehrzahl: Mitochondrien). Mitochondrien nennt man auch die &bdquo;Kraftwerke der Zelle&ldquo;, weil sie fast die gesamte Energie für alle Lebensvorgänge produzieren. Eine aktive Körperzelle kann mehrere Tausend Mitochondrien enthalten.</p>
+
+          <p>Ohne Essen (kein Traubenzucker) und ohne Atmen (kein Sauerstoff) funktioniert kein einziges Mitochondrium – deshalb müssen wir beides tun, um am Leben zu bleiben.</p>
+
+          <hr class="info-divider">
+
+          <p class="alltagsbezug">Mitochondrien sind nicht immer Teil der Zelle gewesen. Die <strong>Endosymbiontenhypothese</strong> erklärt: Vor etwa 1,5 bis 2 Milliarden Jahren hat eine frühe Urzelle ein freilebendEs Bakterium aufgenommen – statt es zu verdauen, lebte das Bakterium weiter in der Zelle und wurde zum Mitochondrium. Hinweise dafür: Mitochondrien besitzen eine <strong>eigene, ringförmige DNA</strong>, haben <strong>zwei Membranen</strong> und teilen sich <strong>eigenständig</strong> – alles typische Bakterienmerkmale.</p>
+
+          <div class="dokument-karte">
+            <div class="dokument-karte-header">Labornotiz – Dr. Zara Kern</div>
+            <p>Der Ort der Zellatmung ist das <strong>MITOCHONDRIUM</strong> – das Code-Wort für diese Datenbank.</p>
+            <p class="dokument-karte-hinweis">„Das Mitochondrium ist das Kraftwerk der Zelle – wer es versteht, versteht, warum Leben ohne Energie undenkbar ist." – Dr. Z. Kern</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- STRATEGIE-KOFFER -->
+      <details class="strategie-koffer">
+        <summary class="strategie-koffer-summary">
+          <span class="koffer-icon">🧰</span> Strategie-Koffer – Tipps für diese Aufgaben
+        </summary>
+        <div class="strategie-koffer-content">
+          <ul>
+            <li>Lies die Wortgleichung der Zellatmung genau: Links stehen die Ausgangsstoffe, rechts die Endprodukte – diese Struktur hilft dir bei vielen Aufgaben.</li>
+            <li>Merke dir: Essen liefert Traubenzucker, Atmen liefert Sauerstoff – beide zusammen ermöglichen erst die Zellatmung im Mitochondrium.</li>
+            <li>Bei Zuordnungsaufgaben: Fang mit dem Stoff an, den du am sichersten kennst, und schließe die anderen durch Ausschluss ein.</li>
+          </ul>
+        </div>
+      </details>
+
+      <!-- ===== AUFGABE 1 ===== -->
+      <section id="task-1" class="task-block visible" aria-label="Aufgabe 1">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 1</span>
+          <span class="task-difficulty">★☆☆</span>
+        </div>
+        <h3 class="task-question">Was entsteht bei der Zellatmung? Wähle die richtige vollständige Wortgleichung.</h3>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="radio" name="q1" value="A">
+            <span class="option-text">A) Traubenzucker + Sauerstoff &rarr; Kohlenstoffdioxid + Wasser + Energie</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="B">
+            <span class="option-text">B) Traubenzucker + Wasser &rarr; Sauerstoff + Kohlenstoffdioxid + Energie</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="C">
+            <span class="option-text">C) Sauerstoff + Energie &rarr; Traubenzucker + Kohlenstoffdioxid + Wasser</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q1" value="D">
+            <span class="option-text">D) Traubenzucker + Kohlenstoffdioxid &rarr; Sauerstoff + Wasser + Energie</span>
+          </label>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask1()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-1" class="feedback-box hidden"></div>
+
+        <div id="next-btn-1" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(2)">Weiter zu Aufgabe 2 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 2 ===== -->
+      <section id="task-2" class="task-block" aria-label="Aufgabe 2">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 2</span>
+          <span class="task-difficulty">★☆☆</span>
+        </div>
+        <h3 class="task-question">Richtig oder falsch? Beurteil jede Aussage über Zellatmung und Mitochondrien.</h3>
+
+        <div class="task-table-wrap">
+          <table class="rf-table">
+            <thead>
+              <tr>
+                <th class="rf-col-statement">Aussage</th>
+                <th class="rf-col-choice">Richtig</th>
+                <th class="rf-col-choice">Falsch</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Die Zellatmung findet im Mitochondrium statt.</td>
+                <td class="rf-radio"><input type="radio" name="tf2a" value="R"></td>
+                <td class="rf-radio"><input type="radio" name="tf2a" value="F"></td>
+              </tr>
+              <tr>
+                <td>Eine aktive Körperzelle kann mehrere Tausend Mitochondrien enthalten.</td>
+                <td class="rf-radio"><input type="radio" name="tf2b" value="R"></td>
+                <td class="rf-radio"><input type="radio" name="tf2b" value="F"></td>
+              </tr>
+              <tr>
+                <td>Bei der Zellatmung wird ATP verbraucht.</td>
+                <td class="rf-radio"><input type="radio" name="tf2c" value="R"></td>
+                <td class="rf-radio"><input type="radio" name="tf2c" value="F"></td>
+              </tr>
+              <tr>
+                <td>Kohlenstoffdioxid ist ein Ausgangsstoff der Zellatmung.</td>
+                <td class="rf-radio"><input type="radio" name="tf2d" value="R"></td>
+                <td class="rf-radio"><input type="radio" name="tf2d" value="F"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask2()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-2" class="feedback-box hidden"></div>
+
+        <div id="next-btn-2" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(3)">Weiter zu Aufgabe 3 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 3 ===== -->
+      <section id="task-3" class="task-block" aria-label="Aufgabe 3">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 3</span>
+          <span class="task-difficulty">★★☆</span>
+        </div>
+        <h3 class="task-question">Im Hefe-Ballon-Experiment wird ein Luftballon auf eine Flasche mit Hefe, Zucker und lauwarmem Wasser gestülpt. Nach etwa 30 Minuten bläst sich der Ballon auf. Was ist die richtige Erklärung dafür?</h3>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="radio" name="q3" value="A">
+            <span class="option-text">A) Die Hefe nimmt Sauerstoff aus der Luft auf und pustet ihn als Kohlenstoffdioxid wieder aus.</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q3" value="B">
+            <span class="option-text">B) Die Hefe baut den Zucker ab und produziert dabei Kohlenstoffdioxid, das den Ballon aufbläst.</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q3" value="C">
+            <span class="option-text">C) Das Wasser verdunstet durch die Wärme und dehnt den Ballon aus.</span>
+          </label>
+          <label class="option-label">
+            <input type="radio" name="q3" value="D">
+            <span class="option-text">D) Die Hefe produziert Sauerstoff beim Abbau von Zucker, der in den Ballon steigt.</span>
+          </label>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask3()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-3" class="feedback-box hidden"></div>
+
+        <div id="next-btn-3" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(4)">Weiter zu Aufgabe 4 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 4 ===== -->
+      <section id="task-4" class="task-block" aria-label="Aufgabe 4">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 4</span>
+          <span class="task-difficulty">★★☆</span>
+        </div>
+        <h3 class="task-question">Ordne jeden Stoff seiner Rolle bei der Zellatmung zu.</h3>
+
+        <div class="zuordnung-liste">
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Traubenzucker (Glucose)</span>
+            <select name="sel4_i1" id="sel4_i1" class="zuordnung-select">
+              <option value="">– wählen –</option>
+              <option value="ausgangsstoff">Ausgangsstoff</option>
+              <option value="endprodukt">Endprodukt</option>
+              <option value="energietraeger">Energieträger</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Sauerstoff (O&#8322;)</span>
+            <select name="sel4_i2" id="sel4_i2" class="zuordnung-select">
+              <option value="">– wählen –</option>
+              <option value="ausgangsstoff">Ausgangsstoff</option>
+              <option value="endprodukt">Endprodukt</option>
+              <option value="energietraeger">Energieträger</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Kohlenstoffdioxid (CO&#8322;)</span>
+            <select name="sel4_i3" id="sel4_i3" class="zuordnung-select">
+              <option value="">– wählen –</option>
+              <option value="ausgangsstoff">Ausgangsstoff</option>
+              <option value="endprodukt">Endprodukt</option>
+              <option value="energietraeger">Energieträger</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">Wasser (H&#8322;O)</span>
+            <select name="sel4_i4" id="sel4_i4" class="zuordnung-select">
+              <option value="">– wählen –</option>
+              <option value="ausgangsstoff">Ausgangsstoff</option>
+              <option value="endprodukt">Endprodukt</option>
+              <option value="energietraeger">Energieträger</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-term">ATP</span>
+            <select name="sel4_i5" id="sel4_i5" class="zuordnung-select">
+              <option value="">– wählen –</option>
+              <option value="ausgangsstoff">Ausgangsstoff</option>
+              <option value="endprodukt">Endprodukt</option>
+              <option value="energietraeger">Energieträger</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask4()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-4" class="feedback-box hidden"></div>
+
+        <div id="next-btn-4" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask(5)">Weiter zu Aufgabe 5 →</button>
+        </div>
+      </section>
+
+      <!-- ===== AUFGABE 5 ===== -->
+      <section id="task-5" class="task-block" aria-label="Aufgabe 5">
+        <div class="task-header">
+          <span class="task-number">Aufgabe 5</span>
+          <span class="task-difficulty">★★★</span>
+        </div>
+        <h3 class="task-question">Warum müssen wir sowohl essen ALS AUCH atmen, um am Leben zu bleiben? Wähle alle zutreffenden Aussagen aus.</h3>
+        <p class="task-anweisung">Mehrere Antworten können richtig sein.</p>
+
+        <div class="task-options">
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="A">
+            <span class="option-text">A) Beim Essen nehmen wir Traubenzucker (Glucose) auf, der als Ausgangsstoff für die Zellatmung gebraucht wird.</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="B">
+            <span class="option-text">B) Beim Atmen nehmen wir Sauerstoff auf, der in den Mitochondrien für die Zellatmung benötigt wird.</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="C">
+            <span class="option-text">C) Atmen liefert ATP direkt aus der Luft in die Zellen.</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="D">
+            <span class="option-text">D) Ohne Nahrung steht kein Traubenzucker zur Verfügung – die Mitochondrien können keine Energie produzieren.</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="E">
+            <span class="option-text">E) Ohne Sauerstoff können die Mitochondrien die Zellatmung nicht vollständig durchführen und kaum ATP erzeugen.</span>
+          </label>
+          <label class="option-label">
+            <input type="checkbox" name="q5" value="F">
+            <span class="option-text">F) Essen ersetzt die Notwendigkeit zu atmen, wenn genug Zucker vorhanden ist.</span>
+          </label>
+        </div>
+
+        <div class="task-tipps">
+          <details class="tipp-details">
+            <summary class="tipp-summary">💡 Tipp 1</summary>
+            <p class="tipp-text">Schau dir die Wortgleichung der Zellatmung genau an: Traubenzucker + Sauerstoff &rarr; Kohlenstoffdioxid + Wasser + Energie. Woher kommen die beiden Ausgangsstoffe? Welche Körperfunktion liefert welchen?</p>
+          </details>
+          <details class="tipp-details">
+            <summary class="tipp-summary">💡 Tipp 2</summary>
+            <p class="tipp-text">Essen liefert den Traubenzucker (aus der Verdauung), Atmen liefert den Sauerstoff (aus der Lunge ins Blut). Ohne einen der beiden Ausgangsstoffe stoppt die Zellatmung im Mitochondrium – und ohne ATP können keine Lebensvorgänge ablaufen.</p>
+          </details>
+        </div>
+
+        <div class="task-actions">
+          <button class="btn-check" onclick="checkTask5()">Antwort prüfen</button>
+        </div>
+
+        <div id="feedback-5" class="feedback-box hidden"></div>
+
+        <div id="next-btn-5" class="next-button-wrap hidden">
+          <button class="btn-next" onclick="goToTask('code')">Zum Code-Eingabe-Bereich →</button>
+        </div>
+      </section>
+
+      <!-- ===== CODE-EINGABE ===== -->
+      <section id="code-section" class="code-section" style="display:none;" aria-label="Labor öffnen">
+        <div class="code-section-inner">
+          <h2 class="code-section-title">🔐 Labor öffnen</h2>
+          <p class="code-section-desc">Ihr habt alle Aufgaben gelöst! Gebt jetzt das Code-Wort ein, das ihr im Informationstext gefunden habt, um die Datenbank zu entschlüsseln und Labor 5 freizuschalten.</p>
+          <div class="code-input-wrap">
+            <input
+              type="text"
+              id="code-input"
+              class="code-input"
+              placeholder="Code-Wort eingeben …"
+              autocomplete="off"
+              autocorrect="off"
+              autocapitalize="characters"
+              spellcheck="false"
+            >
+            <button class="btn-code-check" onclick="checkCode()">Entsperren</button>
+          </div>
+          <div id="feedback-code" class="feedback-box hidden"></div>
+        </div>
+      </section>
+
+      <!-- ===== DISKUSSION ===== -->
+      <section class="discussion-block" aria-label="Diskussionsaufgabe">
+        <h2 class="discussion-title">💬 Diskussionsaufgabe</h2>
+        <p class="discussion-question">Das <strong>MITOCHONDRIUM</strong> wird als &bdquo;Kraftwerk der Zelle&ldquo; bezeichnet – aber was passiert, wenn dieses Kraftwerk versagt? Überlegt gemeinsam: Warum sind Muskelzellen und Herzmuskelzellen besonders reich an Mitochondrien? Und was könnte es bedeuten, wenn Mitochondrien in einer Zelle nicht mehr richtig funktionieren?</p>
+        <p class="discussion-hint">Diskutiert in der Klasse oder schreibt eure Gedanken auf!</p>
+      </section>
+
+      <!-- ===== EXKURS ===== -->
+      <section class="exkurs-block" aria-label="Vertiefung">
+        <h2 class="exkurs-title">🔭 Weiterforschen: Zellatmung-Animation</h2>
+        <p>Planet Schule bietet eine interaktive Animation der Zellatmung an (SWR/WDR). Schaut euch an, wie Mitochondrien als Kraftwerk funktionieren und wie Glucose mit Sauerstoff zu Energie, CO&#8322; und Wasser umgewandelt wird – mit klickbarer Grafik und Erklärungen, kostenlos und werbefrei.</p>
+        <a
+          href="https://www.planet-schule.de/schwerpunkt/lebensraeume-im-wald/zellatmung-animation-100.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="exkurs-link"
+        >Zur Zellatmungs-Animation auf Planet Schule →</a>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-copy">Zellen-Escape-Room NT9 – erstellt von Jonas Engeler</span>
+      <a href="../lehrer.html" class="footer-teacher-link">Lehrer-Login</a>
+    </div>
+  </footer>
+
+  <script src="../scripts/app.js"></script>
+  <script>
+    var _at1 = 0, _at2 = 0, _at3 = 0, _at4 = 0, _at5 = 0;
+    // App initialisieren: Kapitel 4, 5 Aufgaben
+    initApp(4, 5);
+
+    // Code-Wort für dieses Labor
+    var MAPPE_CODE = 'MITOCHONDRIUM';
+
+    // ─── completeTask: Aufgabe abschliessen, Sound + Stempel mit Guards ───
+    function completeTask(taskNr) {
+      var taskEl = document.getElementById('task-' + taskNr);
+      if (taskEl) taskEl.classList.add('completed');
+      var nb = document.getElementById('next-btn-' + taskNr);
+      if (nb) nb.classList.remove('hidden');
+      var navItem = document.querySelector('.task-nav-item[data-task="' + taskNr + '"]');
+      if (navItem) {
+        navItem.classList.remove('active', 'locked');
+        navItem.classList.add('completed');
+        var st = navItem.querySelector('.task-status');
+        if (st) st.textContent = '✓';
+      }
+      var nextItem = document.querySelector('.task-nav-item[data-task="' + (taskNr + 1) + '"]');
+      if (nextItem) {
+        nextItem.classList.remove('locked');
+        var ns = nextItem.querySelector('.task-status');
+        if (ns) ns.textContent = '';
+      }
+      if (typeof playSound === 'function') playSound('correct');
+      if (typeof showStamp === 'function') showStamp(taskNr);
+    }
+
+    // ─── AUFGABE 1 – Multiple Choice (Wortgleichung der Zellatmung) ───
+    function checkTask1() {
+      var selected = document.querySelector('input[name="q1"]:checked');
+      var feedbackEl = document.getElementById('feedback-1');
+      var nextBtn = document.getElementById('next-btn-1');
+
+      if (!selected) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte wähle eine Antwort aus.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (selected.value === 'A') {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = 'Genau! Bei der Zellatmung werden Traubenzucker (Glucose) und Sauerstoff umgewandelt. Dabei entstehen Kohlenstoffdioxid, Wasser und Energie – die in Form von ATP gespeichert wird. Der Ort der Zellatmung ist das <strong>MITOCHONDRIUM</strong>.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at1 === 0 ? 2 : _at1 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(4, 1, _pts);
+        completeTask(1);
+      } else if (selected.value === 'B') {
+        _at1++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht ganz. Wasser ist zwar ein Endprodukt der Zellatmung, aber kein Ausgangsstoff. Die Ausgangsstoffe sind Traubenzucker und Sauerstoff.';
+      } else if (selected.value === 'C') {
+        _at1++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Falsch. Sauerstoff und Energie sind keine Ausgangsstoffe der Zellatmung – Sauerstoff wird verbraucht, Energie entsteht dabei.';
+      } else {
+        _at1++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Falsch. Kohlenstoffdioxid ist ein Endprodukt, kein Ausgangsstoff. Auf der linken Seite der Gleichung stehen Traubenzucker und Sauerstoff.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 2 – Richtig/Falsch ───
+    function checkTask2() {
+      var feedbackEl = document.getElementById('feedback-2');
+      var nextBtn = document.getElementById('next-btn-2');
+
+      var names = ['tf2a', 'tf2b', 'tf2c', 'tf2d'];
+      var correct = ['R', 'R', 'F', 'F'];
+      var allAnswered = true;
+      var allCorrect = true;
+
+      for (var i = 0; i < names.length; i++) {
+        var sel = document.querySelector('input[name="' + names[i] + '"]:checked');
+        if (!sel) {
+          allAnswered = false;
+          break;
+        }
+        if (sel.value !== correct[i]) {
+          allCorrect = false;
+        }
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte beantworte alle vier Aussagen.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Sehr gut! Du hast alle Aussagen korrekt bewertet. Das Mitochondrium ist der Ort der Zellatmung. Bei der Zellatmung wird ATP produziert, nicht verbraucht. Aktive Zellen können tatsächlich mehrere Tausend Mitochondrien enthalten. Kohlenstoffdioxid ist ein Endprodukt, kein Ausgangsstoff.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at2 === 0 ? 2 : _at2 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(4, 2, _pts);
+        completeTask(2);
+      } else {
+        _at2++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht ganz. Überprüfe deine Antworten: Achte besonders darauf, ob ATP produziert oder verbraucht wird, und ob Kohlenstoffdioxid ein Ausgangs- oder Endprodukt ist.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 3 – Multiple Choice (Hefe-Ballon-Experiment) ───
+    function checkTask3() {
+      var selected = document.querySelector('input[name="q3"]:checked');
+      var feedbackEl = document.getElementById('feedback-3');
+      var nextBtn = document.getElementById('next-btn-3');
+
+      if (!selected) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte wähle eine Antwort aus.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (selected.value === 'B') {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Genau! Die Hefe betreibt alkoholische Gärung: Sie baut Zucker ohne Sauerstoff ab und produziert dabei Kohlenstoffdioxid (CO\u2082). Da der Ballon die Flasche luftdicht verschließt, kann das Gas nicht entweichen – es dehnt den Ballon aus. Das Experiment macht die Zellatmung sichtbar.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at3 === 0 ? 2 : _at3 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(4, 3, _pts);
+        completeTask(3);
+      } else if (selected.value === 'A') {
+        _at3++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Das stimmt so nicht. Hefe wandelt Sauerstoff nicht um und pustet ihn nicht aus. Bei der Gärung wird Zucker abgebaut – ganz ohne Sauerstoff.';
+      } else if (selected.value === 'C') {
+        _at3++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nein. Wasserdampf allein würde den Ballon nicht merklich aufblasen. Das Gas im Ballon ist Kohlenstoffdioxid, das die Hefe beim Zuckerabbau produziert.';
+      } else {
+        _at3++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Falsch. Bei der Gärung entsteht kein Sauerstoff, sondern Kohlenstoffdioxid (CO\u2082) und Alkohol. Sauerstoff wird bei dieser anaeroben Reaktion gar nicht gebraucht.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 4 – Zuordnung ───
+    function checkTask4() {
+      var feedbackEl = document.getElementById('feedback-4');
+      var nextBtn = document.getElementById('next-btn-4');
+
+      var ids = ['sel4_i1', 'sel4_i2', 'sel4_i3', 'sel4_i4', 'sel4_i5'];
+      var correctAnswers = ['ausgangsstoff', 'ausgangsstoff', 'endprodukt', 'endprodukt', 'energietraeger'];
+      var allAnswered = true;
+      var allCorrect = true;
+
+      for (var i = 0; i < ids.length; i++) {
+        var sel = document.getElementById(ids[i]);
+        if (!sel || sel.value === '') {
+          allAnswered = false;
+          break;
+        }
+        if (sel.value !== correctAnswers[i]) {
+          allCorrect = false;
+        }
+      }
+
+      if (!allAnswered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte ordne alle fünf Stoffe zu.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (allCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Perfekt! Traubenzucker und Sauerstoff werden in der Zellatmung verbraucht (Ausgangsstoffe). Kohlenstoffdioxid und Wasser entstehen dabei (Endprodukte). Die gewonnene Energie wird als ATP gespeichert – der universelle Energieträger jeder Zelle.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at4 === 0 ? 2 : _at4 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(4, 4, _pts);
+        completeTask(4);
+      } else {
+        _at4++;
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Nicht ganz. Denk an die Wortgleichung: Links stehen die Ausgangsstoffe (Traubenzucker + Sauerstoff), rechts die Endprodukte (Kohlenstoffdioxid + Wasser + Energie). Die Energie wird als ATP gespeichert.';
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── AUFGABE 5 – Mehrfachauswahl ───
+    function checkTask5() {
+      var feedbackEl = document.getElementById('feedback-5');
+      var nextBtn = document.getElementById('next-btn-5');
+
+      var checked = Array.from(document.querySelectorAll('input[name="q5"]:checked')).map(function(el) { return el.value; });
+      var correct = ['A', 'B', 'D', 'E'];
+
+      if (checked.length === 0) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte wähle mindestens eine Antwort aus.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      var isCorrect = correct.length === checked.length &&
+        correct.every(function(v) { return checked.indexOf(v) !== -1; });
+
+      if (isCorrect) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.textContent = 'Ausgezeichnet! Essen und Atmen liefern die beiden unverzichtbaren Ausgangsstoffe der Zellatmung: Nahrung liefert Traubenzucker (über die Verdauung), Atmen liefert Sauerstoff (über die Lunge). Fehlt einer der beiden, können die Mitochondrien kein ATP produzieren – und alle Lebensvorgänge kommen zum Stillstand.';
+        nextBtn.classList.remove('hidden');
+        var _pts = _at5 === 0 ? 2 : _at5 === 1 ? 1 : 0;
+        if (typeof awardPoints === 'function') awardPoints(4, 5, _pts);
+        completeTask(5);
+      } else {
+        _at5++;
+        var wrongMsg = 'Nicht alle Antworten sind korrekt. ';
+        if (checked.indexOf('C') !== -1) {
+          wrongMsg += 'C ist falsch: ATP wird nicht aus der Luft aufgenommen. ATP entsteht ausschließlich in den Mitochondrien durch die Zellatmung – die Luft liefert nur den Sauerstoff dafür. ';
+        }
+        if (checked.indexOf('F') !== -1) {
+          wrongMsg += 'F ist falsch: Essen und Atmen können sich nicht gegenseitig ersetzen. Traubenzucker und Sauerstoff sind beide nötig – fehlt der Sauerstoff, kann keine vollständige Zellatmung stattfinden, egal wie viel Zucker vorhanden ist.';
+        }
+        if (checked.indexOf('C') === -1 && checked.indexOf('F') === -1) {
+          wrongMsg = 'Nicht alle richtigen Aussagen sind ausgewählt. Schau dir die Wortgleichung der Zellatmung noch einmal an und überlege, woher Traubenzucker und Sauerstoff kommen.';
+        }
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = wrongMsg;
+      }
+      feedbackEl.classList.remove('hidden');
+    }
+
+    // ─── CODE-EINGABE ───
+    function checkCode() {
+      var input = document.getElementById('code-input');
+      var feedbackEl = document.getElementById('feedback-code');
+      var entered = input.value.trim().toUpperCase();
+
+      if (!entered) {
+        feedbackEl.className = 'feedback-box feedback-hint';
+        feedbackEl.textContent = 'Bitte gib das Code-Wort ein.';
+        feedbackEl.classList.remove('hidden');
+        return;
+      }
+
+      if (entered === MAPPE_CODE) {
+        feedbackEl.className = 'feedback-box feedback-correct';
+        feedbackEl.innerHTML = '<strong>Datenbank 4 erfolgreich entschlüsselt!</strong> Das Code-Wort <strong>MITOCHONDRIUM</strong> war korrekt. Labor 5 ist jetzt freigeschaltet!';
+        feedbackEl.classList.remove('hidden');
+        if (typeof playSound === 'function') {
+          playSound('unlock');
+        }
+        if (typeof unlockNextMappe === 'function') {
+          unlockNextMappe(4);
+        }
+      } else {
+        feedbackEl.className = 'feedback-box feedback-wrong';
+        feedbackEl.textContent = 'Das Code-Wort ist nicht korrekt. Lies den Informationstext noch einmal sorgfältig – das gesuchte Wort steht fett gedruckt im Text und bezeichnet den Ort der Zellatmung.';
+        feedbackEl.classList.remove('hidden');
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    // Enter-Taste in Code-Eingabe
+    document.getElementById('code-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        checkCode();
+      }
+    });
+  </script>
+
+</body>
+</html>

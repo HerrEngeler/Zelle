@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zellen-Escape-Room NT9 – Labor 3: Deine Zellen, meine Zellen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body class="mappe-page">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="../index.html" class="site-logo">NT9<span class="logo-badge">Escape</span></a>
+    <nav class="chapter-nav" aria-label="Kapitel-Navigation">
+      <a href="#" class="nav-arrow" id="prev-mappe">‹</a>
+      <div class="chapter-circles">
+        <a href="labor-01.html" class="chapter-circle" data-mappe="1" data-title="Labor 1">1</a>
+        <a href="labor-02.html" class="chapter-circle" data-mappe="2" data-title="Labor 2">2</a>
+        <a href="labor-03.html" class="chapter-circle active" data-mappe="3" data-title="Labor 3">3</a>
+        <a href="labor-04.html" class="chapter-circle" data-mappe="4" data-title="Labor 4">4</a>
+        <a href="labor-05.html" class="chapter-circle" data-mappe="5" data-title="Labor 5">5</a>
+        <a href="labor-06.html" class="chapter-circle" data-mappe="6" data-title="Labor 6">6</a>
+        <a href="labor-07.html" class="chapter-circle" data-mappe="7" data-title="Labor 7">7</a>
+      </div>
+      <a href="#" class="nav-arrow" id="next-mappe">›</a>
+    </nav>
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Aufgaben ein-/ausblenden">☰</button>
+  </div>
+</header>
+
+<div class="mappe-banner">
+  <div class="mappe-banner-inner">
+    <span class="mappe-label">Labor 3</span>
+    <h1>Deine Zellen, meine Zellen</h1>
+  </div>
+</div>
+
+<div class="layout-wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="task-sidebar" id="task-sidebar">
+    <h2 class="sidebar-title">Aufgaben</h2>
+    <ul class="task-list">
+      <li class="task-nav-item active" data-task="1">
+        <span class="task-status"></span>
+        <span class="task-nav-title">Bestandteile der Tierzelle</span>
+      </li>
+      <li class="task-nav-item locked" data-task="2">
+        <span class="task-status">🔒</span>
+        <span class="task-nav-title">Richtig oder falsch?</span>
+      </li>
+      <li class="task-nav-item locked" data-task="3">
+        <span class="task-status">🔒</span>
+        <span class="task-nav-title">Zuordnung: Welche Zelle?</span>
+      </li>
+      <li class="task-nav-item locked" data-task="4">
+        <span class="task-status">🔒</span>
+        <span class="task-nav-title">Experiment: Reihenfolge</span>
+      </li>
+      <li class="task-nav-item locked" data-task="5">
+        <span class="task-status">🔒</span>
+        <span class="task-nav-title">Warum die MEMBRAN?</span>
+      </li>
+      <li class="task-nav-item locked" data-task="code">
+        <span class="task-status">🔒</span>
+        <span class="task-nav-title">Labor 4 öffnen</span>
+      </li>
+    </ul>
+  </aside>
+
+  <main class="content-area">
+
+    <!-- ARCHIV-KONTEXT -->
+    <div class="archive-context">
+      <div class="archive-stamp">Zellen-Escape-Room NT9 · Labor 3 · Vergleichsmorphologie</div>
+      <p class="context-text">Datenbank 3 – Vergleichsmorphologie: &bdquo;Du willst wissen, was alle tierischen Zellen verbindet? Dann beweise es. Die Antwort liegt in dem, was keine Zelle fehlen darf.&ldquo;</p>
+    </div>
+
+    <!-- STRATEGIEKOFFER -->
+    <details class="strategie-koffer">
+      <summary>🧰 Methodenkoffer – So arbeitest du mit den Quellen</summary>
+      <div class="strategie-koffer-body">
+        <div class="strategie-item"><strong>Zweimal lesen:</strong> Beim ersten Lesen verschaffe dir einen Überblick. Beim zweiten markiere wichtige Stellen.</div>
+        <div class="strategie-item"><strong>Vergleichen:</strong> Was haben Pflanzen- und Tierzelle gemeinsam? Was unterscheidet sie? Nutze die Tabelle als Hilfsmittel.</div>
+        <div class="strategie-item"><strong>Widersprüche suchen:</strong> Stimmt das, was du liest, mit dem überein, was du bereits weißt?</div>
+        <div class="strategie-item"><strong>In eigenen Worten:</strong> Formuliere den Kerngedanken in 1–2 eigenen Sätzen.</div>
+      </div>
+    </details>
+
+    <!-- ======================================================
+         AUFGABE 1 – Mehrfachauswahl: Bestandteile Tierzelle
+         ====================================================== -->
+    <div class="task-block visible" id="task-1">
+      <div class="task-block-header">
+        <div class="task-meta">
+          <span class="task-number">Aufgabe 1 von 5</span>
+          <span class="difficulty" title="Einfach">★☆☆</span>
+        </div>
+      </div>
+      <h2 class="task-title-h2">Bestandteile der tierischen Zelle</h2>
+
+      <div class="document-card">
+        <div class="document-stamp">Zellbiologie-Datenbank · Eintrag 3-A</div>
+        <div class="document-text">
+          <p>Jedes Lebewesen – egal ob Mensch, Tier oder Pflanze – besteht aus Zellen. Die tierische Zelle ist die Grundeinheit unseres Körpers. Sie besitzt mehrere wichtige Bestandteile: Der <strong>Zellkern</strong> (Nukleus) enthält die gesamte Erbinformation und steuert alle Vorgänge in der Zelle. Das <strong>Zytoplasma</strong> füllt das Zellinnere aus und umgibt alle Organellen. Die <strong>Mitochondrien</strong> – auch &bdquo;Kraftwerke der Zelle&ldquo; genannt – gewinnen aus Nährstoffen die Energie, die die Zelle zum Leben braucht.</p>
+          <p>Was alle Zellen – tierische wie pflanzliche – gemeinsam haben, ist die <strong>MEMBRAN</strong>: Die <strong>Zellmembran</strong> umhüllt jede Zelle vollständig. Sie ist hauchdünn, aber entscheidend: Sie trennt das Zellinnere von der Umgebung und kontrolliert, welche Stoffe ein- und ausströmen dürfen. Ohne <strong>Membran</strong> kein Leben.</p>
+          <p>Im Vergleich zur Pflanzenzelle fällt auf, was der tierischen Zelle fehlt: keine Zellwand, keine Chloroplasten, keine große Vakuole. Dafür ist die tierische Zelle flexibler in ihrer Form. Statt Stärke speichert sie Energie als Glykogen. <strong>Lysosomen</strong> – zelluläre Recyclinganlagen – sind ein weiteres Merkmal, das typisch für die tierische Zelle ist.</p>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <p class="question-text">Welche der folgenden Bestandteile gehören zur tierischen Zelle? Wähle alle zutreffenden Antworten.</p>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="checkbox" name="q1" value="a"> Zellkern
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q1" value="b"> Chloroplasten
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q1" value="c"> Mitochondrien
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q1" value="d"> Zellwand
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q1" value="e"> Zytoplasma
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q1" value="f"> Lysosomen
+          </label>
+        </div>
+        <button class="btn-check" onclick="checkTask1()">Antwort prüfen</button>
+      </div>
+
+      <div class="feedback-area" id="feedback-1"></div>
+      <button class="btn-next" id="next-btn-1" style="display:none;" onclick="showTask(2)">
+        Weiter zu Aufgabe 2 →
+      </button>
+    </div>
+
+    <!-- ======================================================
+         AUFGABE 2 – Richtig/Falsch-Tabelle
+         ====================================================== -->
+    <div class="task-block" id="task-2">
+      <div class="task-block-header">
+        <div class="task-meta">
+          <span class="task-number">Aufgabe 2 von 5</span>
+          <span class="difficulty" title="Einfach">★☆☆</span>
+        </div>
+      </div>
+      <h2 class="task-title-h2">Richtig oder falsch?</h2>
+
+      <div class="document-card">
+        <div class="document-stamp">Zellbiologie-Datenbank · Eintrag 3-B · Vergleichstabelle</div>
+        <div class="document-text">
+          <table class="vergleich-tabelle">
+            <thead>
+              <tr>
+                <th>Bestandteil</th>
+                <th>Pflanzenzelle</th>
+                <th>Tierische Zelle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Zellmembran</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Zellwand</td><td>✓</td><td>✗</td></tr>
+              <tr><td>Zellkern</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Vakuole (groß)</td><td>✓</td><td>✗</td></tr>
+              <tr><td>Chloroplasten</td><td>✓</td><td>✗</td></tr>
+              <tr><td>Mitochondrien</td><td>✓</td><td>✓</td></tr>
+              <tr><td>Lysosomen</td><td>✗</td><td>✓</td></tr>
+              <tr><td>Zytoplasma</td><td>✓</td><td>✓</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <p class="question-text">Richtig oder falsch? Beurteil die folgenden Aussagen über Tier- und Pflanzenzellen.</p>
+        <div class="rf-table">
+          <div class="rf-row">
+            <span class="rf-text">Zellmembran und Zellkern kommen sowohl in Tier- als auch in Pflanzenzellen vor.</span>
+            <div class="rf-radios">
+              <label><input type="radio" name="rf2-a" value="true"> Richtig</label>
+              <label><input type="radio" name="rf2-a" value="false"> Falsch</label>
+            </div>
+          </div>
+          <div class="rf-row">
+            <span class="rf-text">Die tierische Zelle besitzt eine starre Zellwand, die ihr eine feste Form gibt.</span>
+            <div class="rf-radios">
+              <label><input type="radio" name="rf2-b" value="true"> Richtig</label>
+              <label><input type="radio" name="rf2-b" value="false"> Falsch</label>
+            </div>
+          </div>
+          <div class="rf-row">
+            <span class="rf-text">Mitochondrien kommen in beiden Zelltypen vor.</span>
+            <div class="rf-radios">
+              <label><input type="radio" name="rf2-c" value="true"> Richtig</label>
+              <label><input type="radio" name="rf2-c" value="false"> Falsch</label>
+            </div>
+          </div>
+          <div class="rf-row">
+            <span class="rf-text">Chloroplasten ermöglichen der Pflanzenzelle die Fotosynthese und fehlen der tierischen Zelle.</span>
+            <div class="rf-radios">
+              <label><input type="radio" name="rf2-d" value="true"> Richtig</label>
+              <label><input type="radio" name="rf2-d" value="false"> Falsch</label>
+            </div>
+          </div>
+          <div class="rf-row">
+            <span class="rf-text">Die tierische Zelle speichert Energie in Form von Stärke.</span>
+            <div class="rf-radios">
+              <label><input type="radio" name="rf2-e" value="true"> Richtig</label>
+              <label><input type="radio" name="rf2-e" value="false"> Falsch</label>
+            </div>
+          </div>
+        </div>
+        <button class="btn-check" onclick="checkTask2()">Antwort prüfen</button>
+      </div>
+
+      <div class="feedback-area" id="feedback-2"></div>
+      <button class="btn-next" id="next-btn-2" style="display:none;" onclick="showTask(3)">
+        Weiter zu Aufgabe 3 →
+      </button>
+    </div>
+
+    <!-- ======================================================
+         AUFGABE 3 – Zuordnung per Select
+         ====================================================== -->
+    <div class="task-block" id="task-3">
+      <div class="task-block-header">
+        <div class="task-meta">
+          <span class="task-number">Aufgabe 3 von 5</span>
+          <span class="difficulty" title="Mittel">★★☆</span>
+        </div>
+      </div>
+      <h2 class="task-title-h2">Zuordnung: Welche Zelle?</h2>
+
+      <div class="document-card">
+        <div class="document-stamp">Zellbiologie-Datenbank · Eintrag 3-C · Organellen-Übersicht</div>
+        <div class="document-text">
+          <p>Jede Zellstruktur hat ihren spezifischen Platz: Manche Bestandteile kommen nur in der Pflanzenzelle vor, andere nur in der tierischen Zelle – und einige teilen beide Zelltypen. Benutze dein Wissen aus dem Text und der Vergleichstabelle.</p>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <p class="question-text">Ordne jeden Bestandteil der richtigen Kategorie zu.</p>
+        <div class="zuordnung-group">
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Zellwand</span>
+            <select name="z3-1" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Chloroplasten</span>
+            <select name="z3-2" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Vakuole (groß)</span>
+            <select name="z3-3" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Lysosomen</span>
+            <select name="z3-4" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Zellmembran</span>
+            <select name="z3-5" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Zellkern</span>
+            <select name="z3-6" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Mitochondrien</span>
+            <select name="z3-7" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+          <div class="zuordnung-row">
+            <span class="zuordnung-label">Zytoplasma</span>
+            <select name="z3-8" class="zuordnung-select">
+              <option value="">– bitte wählen –</option>
+              <option value="nur_pflanze">Nur Pflanzenzelle</option>
+              <option value="nur_tier">Nur Tierische Zelle</option>
+              <option value="beide">Beide Zelltypen</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-check" onclick="checkTask3()">Antwort prüfen</button>
+      </div>
+
+      <div class="feedback-area" id="feedback-3"></div>
+      <button class="btn-next" id="next-btn-3" style="display:none;" onclick="showTask(4)">
+        Weiter zu Aufgabe 4 →
+      </button>
+    </div>
+
+    <!-- ======================================================
+         AUFGABE 4 – Sortierung: Mundschleimhaut-Experiment
+         ====================================================== -->
+    <div class="task-block" id="task-4">
+      <div class="task-block-header">
+        <div class="task-meta">
+          <span class="task-number">Aufgabe 4 von 5</span>
+          <span class="difficulty" title="Mittel">★★☆</span>
+        </div>
+      </div>
+      <h2 class="task-title-h2">Mundschleimhaut-Experiment: Schritte in die richtige Reihenfolge</h2>
+
+      <div class="document-card">
+        <div class="document-stamp">Zellbiologie-Datenbank · Eintrag 3-D · Laborprotokoll</div>
+        <div class="document-text">
+          <p>Du trägst in deinem Körper Billionen von Zellen – und du kannst eine davon ganz einfach selbst unter das Mikroskop legen! Bei der Mundschleimhautprobe streichst du mit einem Wattestäbchen vorsichtig an der Innenseite deiner Wange entlang. Die abgelösten Epithelzellen überträgst du auf einen Objektträger und färbst sie mit Methylenblau an. Unter dem Mikroskop erkennst du dann deutlich den dunklen Zellkern in der Mitte, das hellblau gefärbte Zytoplasma und – wenn du genau hinschaust – die hauchdünne Zellmembran als äußere Begrenzung.</p>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <p class="question-text">Bringe die Schritte des Mundschleimhaut-Experiments in die richtige Reihenfolge:</p>
+        <div class="sort-container" id="sort-4">
+          <p>Ordne die Schritte 1–5:</p>
+          <div class="sort-item">
+            <span>Schritt A: Wattestäbchen sanft über die Wangenschleimhaut reiben</span>
+            <div class="sort-radios">
+              <label><input type="radio" name="sort4-a" value="1"> 1</label>
+              <label><input type="radio" name="sort4-a" value="2"> 2</label>
+              <label><input type="radio" name="sort4-a" value="3"> 3</label>
+              <label><input type="radio" name="sort4-a" value="4"> 4</label>
+              <label><input type="radio" name="sort4-a" value="5"> 5</label>
+            </div>
+          </div>
+          <div class="sort-item">
+            <span>Schritt B: Einen Tropfen Methylenblau-Lösung auf den Objektträger geben</span>
+            <div class="sort-radios">
+              <label><input type="radio" name="sort4-b" value="1"> 1</label>
+              <label><input type="radio" name="sort4-b" value="2"> 2</label>
+              <label><input type="radio" name="sort4-b" value="3"> 3</label>
+              <label><input type="radio" name="sort4-b" value="4"> 4</label>
+              <label><input type="radio" name="sort4-b" value="5"> 5</label>
+            </div>
+          </div>
+          <div class="sort-item">
+            <span>Schritt C: Objektträger unter das Mikroskop legen und scharf stellen</span>
+            <div class="sort-radios">
+              <label><input type="radio" name="sort4-c" value="1"> 1</label>
+              <label><input type="radio" name="sort4-c" value="2"> 2</label>
+              <label><input type="radio" name="sort4-c" value="3"> 3</label>
+              <label><input type="radio" name="sort4-c" value="4"> 4</label>
+              <label><input type="radio" name="sort4-c" value="5"> 5</label>
+            </div>
+          </div>
+          <div class="sort-item">
+            <span>Schritt D: Zellmaterial auf dem Objektträger ausstreichen</span>
+            <div class="sort-radios">
+              <label><input type="radio" name="sort4-d" value="1"> 1</label>
+              <label><input type="radio" name="sort4-d" value="2"> 2</label>
+              <label><input type="radio" name="sort4-d" value="3"> 3</label>
+              <label><input type="radio" name="sort4-d" value="4"> 4</label>
+              <label><input type="radio" name="sort4-d" value="5"> 5</label>
+            </div>
+          </div>
+          <div class="sort-item">
+            <span>Schritt E: Deckglas vorsichtig auflegen</span>
+            <div class="sort-radios">
+              <label><input type="radio" name="sort4-e" value="1"> 1</label>
+              <label><input type="radio" name="sort4-e" value="2"> 2</label>
+              <label><input type="radio" name="sort4-e" value="3"> 3</label>
+              <label><input type="radio" name="sort4-e" value="4"> 4</label>
+              <label><input type="radio" name="sort4-e" value="5"> 5</label>
+            </div>
+          </div>
+        </div>
+        <button class="btn-check" onclick="checkTask4()">Antwort prüfen</button>
+      </div>
+
+      <div class="feedback-area" id="feedback-4"></div>
+      <button class="btn-next" id="next-btn-4" style="display:none;" onclick="showTask(5)">
+        Weiter zu Aufgabe 5 →
+      </button>
+    </div>
+
+    <!-- ======================================================
+         AUFGABE 5 – Mehrfachauswahl mit zweistufigem Tipp
+         ====================================================== -->
+    <div class="task-block" id="task-5">
+      <div class="task-block-header">
+        <div class="task-meta">
+          <span class="task-number">Aufgabe 5 von 5</span>
+          <span class="difficulty" title="Schwer">★★★</span>
+        </div>
+      </div>
+      <h2 class="task-title-h2">Warum die <strong>MEMBRAN</strong>?</h2>
+
+      <div class="document-card">
+        <div class="document-stamp">Zellbiologie-Datenbank · Eintrag 3-E · Schlüsselbegriff</div>
+        <div class="document-text">
+          <p>Die <strong>MEMBRAN</strong> ist der einzige Zellbestandteil, der in <em>allen</em> Zellen vorkommt – egal ob tierisch oder pflanzlich. Sie ist hauchdünn, aber entscheidend: Die <strong>Zellmembran</strong> trennt das Zellinnere von der Umgebung und kontrolliert, welche Stoffe ein- und ausströmen dürfen. Ohne <strong>Membran</strong> kein Leben.</p>
+        </div>
+      </div>
+
+      <div class="question-block">
+        <p class="question-text">Die <strong>MEMBRAN</strong> ist der einzige Zellbestandteil, der in ALLEN Zellen vorkommt – egal ob tierisch oder pflanzlich. Welche Aussagen erklären, warum das so ist? Wähle alle zutreffenden Begründungen.</p>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="checkbox" name="q5" value="a"> Die Zellmembran trennt das Zellinnere von der Außenwelt und ist daher Grundvoraussetzung für das Bestehen einer Zelle.
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q5" value="b"> Die Zellmembran kontrolliert, welche Stoffe in die Zelle ein- und aus ihr ausströmen dürfen.
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q5" value="c"> Die Zellmembran erzeugt die Energie, die die Zelle zum Leben braucht.
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q5" value="d"> Ohne Zellmembran würde der Zellinhalt mit der Umgebung vermischen – die Zelle könnte nicht als eigenständige Einheit existieren.
+          </label>
+          <label class="checkbox-option">
+            <input type="checkbox" name="q5" value="e"> Die Zellmembran ermöglicht die Fotosynthese und ist deshalb in allen Zellen notwendig.
+          </label>
+        </div>
+        <div class="tipp-bereich" id="tipp-bereich-5">
+          <button class="btn-tipp" id="tipp1-btn-5" onclick="showTipp(5, 1)">Tipp 1 anzeigen</button>
+          <div class="tipp-box" id="tipp1-5" style="display:none;">
+            <strong>Tipp 1:</strong> Schau dir nochmal an, was die Zellmembran im Haupttext leistet: Sie umhüllt JEDE Zelle vollständig und kontrolliert den Stoffaustausch. Was würde passieren, wenn sie fehlen würde?
+          </div>
+          <button class="btn-tipp" id="tipp2-btn-5" onclick="showTipp(5, 2)" style="display:none;">Tipp 2 anzeigen</button>
+          <div class="tipp-box" id="tipp2-5" style="display:none;">
+            <strong>Tipp 2:</strong> Energie wird von den Mitochondrien bereitgestellt. Fotosynthese ist eine Spezialfunktion der Pflanzenzelle (Chloroplasten). Die Membran hat eine grundlegendere Funktion: Sie macht die Zelle erst zur Zelle.
+          </div>
+        </div>
+        <button class="btn-check" onclick="checkTask5()">Antwort prüfen</button>
+      </div>
+
+      <div class="feedback-area" id="feedback-5"></div>
+      <button class="btn-next" id="next-btn-5" style="display:none;" onclick="revealCodeSection()">
+        Code-Wort eingeben →
+      </button>
+    </div>
+
+    <!-- ======================================================
+         CODE-SECTION
+         ====================================================== -->
+    <div class="code-section" id="code-section">
+      <div class="code-header">
+        <span class="code-badge">GESICHERT</span>
+        <h3 class="code-title">Labor 4 öffnen</h3>
+        <p class="code-subtitle">Du hast alle Aufgaben gelöst. Gib das Code-Wort ein.</p>
+      </div>
+      <div class="code-input-group">
+        <input type="text" id="code-input" class="code-input" placeholder="CODE" maxlength="12" autocomplete="off">
+        <button class="btn-check" onclick="checkCode()">Bestätigen</button>
+      </div>
+      <div class="feedback-area" id="feedback-code"></div>
+    </div>
+
+    <!-- DISKUSSIONSAUFGABE -->
+    <div class="discussion-block">
+      <span class="discussion-label">💬 Diskussionsaufgabe</span>
+      <p class="discussion-prompt">Pflanzenzellen haben eine starre Zellwand, tierische Zellen dagegen nicht – und sind deshalb flexibler in ihrer Form. Welche Vor- und Nachteile bringt das mit sich? Überlege: In welchen Situationen ist Flexibilität für eine Zelle wichtig – und wann wäre eine feste Hülle nützlicher?</p>
+    </div>
+
+    <!-- EXKURS-LINK -->
+    <div class="exkurs-block">
+      <span class="exkurs-label">📚 Exkurs – Weiterführende Informationen</span>
+      <p>Möchtest du Pflanzenzelle und Tierische Zelle noch einmal übersichtlich vergleichen?</p>
+      <a class="exkurs-link" href="https://www.biologie-schule.de/tierzelle-pflanzenzelle-vergleich.php" target="_blank" rel="noopener">Vergleich Pflanzenzelle vs. Tierzelle auf biologie-schule.de →</a>
+    </div>
+
+  </main>
+</div><!-- /.layout-wrapper -->
+
+<footer class="site-footer">
+  Erstellt mit Liebe &#10084;&#65039; und <a href="https://claude.ai/claude-code" target="_blank" rel="noopener">Claude Code</a> von Jonas Engeler
+  <span class="footer-sep">|</span>
+  <a href="../impressum.html">Impressum</a>
+  <span class="footer-sep">|</span>
+  <a href="../datenschutz.html">Datenschutz</a>
+  <span class="footer-sep">|</span>
+  <a href="../lehrer.html">Lehrer-Login</a>
+</footer>
+
+<script src="../scripts/app.js"></script>
+<script>
+  var _at1 = 0, _at2 = 0, _at3 = 0, _at4 = 0, _at5 = 0;
+  initApp(3, 5);
+
+  const MAPPE_CODE = 'MEMBRAN';
+
+  // ── Tipp-System ──────────────────────────────────────────
+  function showTipp(taskNum, tippNum) {
+    var box = document.getElementById('tipp' + tippNum + '-' + taskNum);
+    var btn = document.getElementById('tipp' + tippNum + '-btn-' + taskNum);
+    if (box) box.style.display = 'block';
+    if (btn) btn.style.display = 'none';
+    // Zweiten Tipp-Button nach Tipp 1 freischalten
+    if (tippNum === 1) {
+      var btn2 = document.getElementById('tipp2-btn-' + taskNum);
+      if (btn2) btn2.style.display = 'inline-block';
+    }
+  }
+
+  // ── completeTask (Guards PFLICHT) ────────────────────────
+  function completeTask(n) {
+    document.getElementById('task-' + n)?.classList.add('completed');
+    var nb = document.getElementById('next-btn-' + n);
+    if (nb) nb.style.display = 'inline-flex';
+    var si = document.querySelector('.task-list [data-task="' + n + '"] .task-status');
+    if (si) si.textContent = '\u2713';
+    var item = document.querySelector('.task-list [data-task="' + n + '"]');
+    if (item) item.classList.replace('active', 'completed');
+    var nextItem = document.querySelector('.task-list [data-task="' + (n + 1) + '"]');
+    if (nextItem) {
+      nextItem.classList.remove('locked');
+      var ns = nextItem.querySelector('.task-status');
+      if (ns) ns.textContent = '';
+    }
+    if (typeof playSound === 'function') playSound('correct');
+    if (typeof showStamp === 'function') showStamp(n);
+  }
+
+  // ── Aufgabe 1: Mehrfachauswahl Tierzelle ─────────────────
+  function checkTask1() {
+    var checks = document.querySelectorAll('input[name="q1"]:checked');
+    if (checks.length === 0) {
+      showFeedback('feedback-1', 'Bitte w\u00e4hle mindestens eine Antwort aus.', 'hint');
+      return;
+    }
+    var selected = Array.from(checks).map(function(c) { return c.value; }).sort();
+    var correct = ['a', 'c', 'e', 'f'];
+    var isCorrect = selected.length === correct.length && selected.every(function(v, i) { return v === correct[i]; });
+    if (isCorrect) {
+      showFeedback('feedback-1', '\u2713 Sehr gut! Die tierische Zelle besitzt Zellkern, Mitochondrien, Zytoplasma und Lysosomen. Chloroplasten und Zellwand sind typische Bestandteile der Pflanzenzelle \u2013 der tierischen Zelle fehlen sie.', 'correct');
+      var _pts = _at1 === 0 ? 2 : _at1 === 1 ? 1 : 0;
+      if (typeof awardPoints === 'function') awardPoints(3, 1, _pts);
+      completeTask(1);
+    } else {
+      _at1++;
+      showFeedback('feedback-1', '\u2717 Nicht ganz. Zur tierischen Zelle geh\u00f6ren Zellkern (speichert die Erbinformation), Mitochondrien (Kraftwerke der Zelle), Zytoplasma (f\u00fcllt das Zellinnere) und Lysosomen. Chloroplasten und Zellwand kommen nur in Pflanzenzellen vor.', 'wrong');
+    }
+  }
+
+  // ── Aufgabe 2: Richtig/Falsch ─────────────────────────────
+  function checkTask2() {
+    var pairs = [
+      { name: 'rf2-a', correct: 'true' },
+      { name: 'rf2-b', correct: 'false' },
+      { name: 'rf2-c', correct: 'true' },
+      { name: 'rf2-d', correct: 'true' },
+      { name: 'rf2-e', correct: 'false' }
+    ];
+    var allAnswered = true;
+    var allCorrect = true;
+    for (var i = 0; i < pairs.length; i++) {
+      var sel = document.querySelector('input[name="' + pairs[i].name + '"]:checked');
+      if (!sel) { allAnswered = false; break; }
+      if (sel.value !== pairs[i].correct) allCorrect = false;
+    }
+    if (!allAnswered) {
+      showFeedback('feedback-2', 'Bitte beantworte alle Aussagen.', 'hint');
+      return;
+    }
+    if (allCorrect) {
+      showFeedback('feedback-2', '\u2713 Hervorragend! Du hast alle Aussagen korrekt beurteilt. Wichtig: Die tierische Zelle hat keine Zellwand \u2013 das macht sie flexibel in der Form. Energie speichert sie als Glykogen, nicht als St\u00e4rke.', 'correct');
+      var _pts = _at2 === 0 ? 2 : _at2 === 1 ? 1 : 0;
+      if (typeof awardPoints === 'function') awardPoints(3, 2, _pts);
+      completeTask(2);
+    } else {
+      _at2++;
+      showFeedback('feedback-2', '\u2717 \u00dcberpr\u00fcfe nochmals: Die tierische Zelle hat KEINE Zellwand \u2013 sie ist gerade deshalb flexibel in ihrer Form. Energie speichert sie als Glykogen (nicht St\u00e4rke). Zellmembran, Zellkern und Mitochondrien teilen beide Zelltypen.', 'wrong');
+    }
+  }
+
+  // ── Aufgabe 3: Zuordnung per Select ──────────────────────
+  function checkTask3() {
+    var answers = [
+      { name: 'z3-1', correct: 'nur_pflanze' },
+      { name: 'z3-2', correct: 'nur_pflanze' },
+      { name: 'z3-3', correct: 'nur_pflanze' },
+      { name: 'z3-4', correct: 'nur_tier' },
+      { name: 'z3-5', correct: 'beide' },
+      { name: 'z3-6', correct: 'beide' },
+      { name: 'z3-7', correct: 'beide' },
+      { name: 'z3-8', correct: 'beide' }
+    ];
+    var allSelected = true;
+    var allCorrect = true;
+    for (var i = 0; i < answers.length; i++) {
+      var sel = document.querySelector('select[name="' + answers[i].name + '"]');
+      if (!sel || sel.value === '') { allSelected = false; break; }
+      if (sel.value !== answers[i].correct) allCorrect = false;
+    }
+    if (!allSelected) {
+      showFeedback('feedback-3', 'Bitte treffe f\u00fcr alle Bestandteile eine Auswahl.', 'hint');
+      return;
+    }
+    if (allCorrect) {
+      showFeedback('feedback-3', '\u2713 Perfekt! Du hast die Vergleichstabelle verstanden. Nur die Pflanzenzelle hat Zellwand, Chloroplasten und gro\u00dfe Vakuole. Lysosomen sind ein Merkmal der tierischen Zelle. Zellmembran, Zellkern, Mitochondrien und Zytoplasma teilen beide Zelltypen.', 'correct');
+      var _pts = _at3 === 0 ? 2 : _at3 === 1 ? 1 : 0;
+      if (typeof awardPoints === 'function') awardPoints(3, 3, _pts);
+      completeTask(3);
+    } else {
+      _at3++;
+      showFeedback('feedback-3', '\u2717 Schau nochmal in die Vergleichstabelle. Tipp: Was braucht die Pflanzenzelle f\u00fcr die Fotosynthese und St\u00fctzung? Diese Bestandteile fehlen der tierischen Zelle. Was alle Zellen teilen, ist das Grundger\u00fcst: Membran, Kern, Mitochondrien und Zytoplasma.', 'wrong');
+    }
+  }
+
+  // ── Aufgabe 4: Sortierung (a=1, d=2, b=3, e=4, c=5) ──────
+  function checkTask4() {
+    var correctOrder = { a: '1', d: '2', b: '3', e: '4', c: '5' };
+    var allSelected = true;
+    var allCorrect = true;
+    var keys = ['a', 'b', 'c', 'd', 'e'];
+    for (var i = 0; i < keys.length; i++) {
+      var k = keys[i];
+      var sel = document.querySelector('input[name="sort4-' + k + '"]:checked');
+      if (!sel) { allSelected = false; break; }
+      if (sel.value !== correctOrder[k]) allCorrect = false;
+    }
+    if (!allSelected) {
+      showFeedback('feedback-4', 'Bitte weise jedem Schritt eine Position zu.', 'hint');
+      return;
+    }
+    if (allCorrect) {
+      showFeedback('feedback-4', '\u2713 Ausgezeichnet! Die Reihenfolge stimmt: Erst Zellen entnehmen (Wattest\u00e4bchen), dann auf den Objekttr\u00e4ger ausstreichen, Farbstoff (Methylenblau) hinzugeben, Deckglas auflegen und zuletzt unter dem Mikroskop scharf stellen. So kannst du Zellkern, Zytoplasma und Zellmembran klar erkennen.', 'correct');
+      var _pts = _at4 === 0 ? 2 : _at4 === 1 ? 1 : 0;
+      if (typeof awardPoints === 'function') awardPoints(3, 4, _pts);
+      completeTask(4);
+    } else {
+      _at4++;
+      showFeedback('feedback-4', '\u2717 Die Reihenfolge stimmt nicht ganz. Denke logisch: Zuerst braucht man das Zellmaterial (Wattest\u00e4bchen), dann kommt es auf den Objekttr\u00e4ger. Danach wird gef\u00e4rbt, dann abgedeckt \u2013 und erst ganz zum Schluss kann man mikroskopieren.', 'wrong');
+    }
+  }
+
+  // ── Aufgabe 5: Mehrfachauswahl mit Tipps ─────────────────
+  function checkTask5() {
+    var checks = document.querySelectorAll('input[name="q5"]:checked');
+    if (checks.length === 0) {
+      showFeedback('feedback-5', 'Bitte w\u00e4hle mindestens eine Begr\u00fcndung aus.', 'hint');
+      return;
+    }
+    var selected = Array.from(checks).map(function(c) { return c.value; }).sort();
+    var correct = ['a', 'b', 'd'];
+    var isCorrect = selected.length === correct.length && selected.every(function(v, i) { return v === correct[i]; });
+    if (isCorrect) {
+      showFeedback('feedback-5', '\u2713 Sehr gut gedacht! Die Zellmembran ist universell, weil sie die Zelle \u00fcberhaupt erst als abgegrenzte Einheit definiert: Sie trennt Innen von Au\u00dfen, verhindert das Vermischen mit der Umgebung und steuert den Stoffaustausch. Energie erzeugen die Mitochondrien \u2013 das ist nicht Aufgabe der Membran. Fotosynthese findet nur in Pflanzenzellen statt.', 'correct');
+      var _pts = _at5 === 0 ? 2 : _at5 === 1 ? 1 : 0;
+      if (typeof awardPoints === 'function') awardPoints(3, 5, _pts);
+      completeTask(5);
+    } else {
+      _at5++;
+      showFeedback('feedback-5', '\u2717 Nicht alle Auswahlen sind korrekt. \u00dcberlege: Was ist die eigentliche Aufgabe der Zellmembran? Sie grenzt ab und steuert den Stoffaustausch. Energie wird von den Mitochondrien erzeugt, nicht von der Membran. Fotosynthese ist eine Funktion der Chloroplasten \u2013 und die gibt es nur in Pflanzenzellen.', 'wrong');
+    }
+  }
+
+  // ── Code-Eingabe ──────────────────────────────────────────
+  function checkCode() {
+    var input = document.getElementById('code-input').value.trim().toUpperCase();
+    if (input === MAPPE_CODE) {
+      if (typeof playSound === 'function') playSound('unlock');
+      if (typeof launchConfetti === 'function') launchConfetti();
+      unlockNextMappe(3);
+    } else {
+      showFeedback('feedback-code', '\u2717 Das Code-Wort ist nicht korrekt. Tipp: Du suchst den Schutzmantel der Zelle \u2013 die hauchdünne Schicht, die kontrolliert, welche Stoffe in die Zelle hinein- und welche herausgelassen werden.', 'wrong');
+    }
+  }
+</script>
+
+</body>
+</html>
